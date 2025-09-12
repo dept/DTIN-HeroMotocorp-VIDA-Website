@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.aem.page/
-- Live: https://main--{repo}--{owner}.aem.live/
+- Preview: https://main--heromotocorp-vida-aem-eds-en--tekno-point.aem.page/
+- Live: https://main--heromotocorp-vida-aem-eds-en--tekno-point.aem.live/
 
 ## Documentation
 
