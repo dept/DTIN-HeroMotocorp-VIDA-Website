@@ -1,10 +1,10 @@
 {
   "mappings": [
-    "/content/vida/:/",
-    "/content/vida/configuration:/.helix/config.json",
-    "/content/vida/metadata:/metadata.json"
+    "/content/vida-eds/:/",
+    "/content/vida-eds/configuration:/.helix/config.json",
+    "/content/vida-eds/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/vida/"
+    "/content/vida-eds/"
   ]
 }
