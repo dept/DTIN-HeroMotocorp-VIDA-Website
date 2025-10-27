@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--heromotocorp-vida-aem-eds-en--tekno-point.aem.page/
-- Live: https://main--heromotocorp-vida-aem-eds-en--tekno-point.aem.live/
+- Preview: https://main--DTIN-HeroMotocorp-VIDA-Website--dept.aem.page/
+- Live: https://main--DTIN-HeroMotocorp-VIDA-Website--dept.aem.live/
 
 ## Documentation
 
