@@ -1,0 +1,174 @@
+.section.faq{
+    max-width: 1312px;
+    margin: 0 auto;
+    padding: 48px 0;
+}
+
+.section.faq .accordion{
+    background-color: #F9F5EE;
+    padding: 8px 24px 24px;
+    border-radius: 24px;
+    margin-top: 32px;
+    height: 388px;
+    overflow: hidden;
+}
+
+.section.faq .accordion .accordion-container{
+    border-bottom: 1px solid #D2D2D2;
+    padding: 16px 0;
+}
+
+.section.faq .accordion .accordion-container:last-child{
+    border: none;
+    padding-bottom: 0;
+}
+
+.section.faq .accordion .accordion-item-label{
+    font-size: 16px;
+    line-height: 24px;
+    font-family: montreal-semibold,sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.25px;
+}
+
+.section.faq .accordion .accordion-item-body{
+    font-size: 14px;
+    line-height: 20px;
+    font-family: montreal-regular,sans-serif;
+    font-weight: 400;
+    padding-bottom: 4px;
+    letter-spacing: 0.25px;
+}
+
+.section.faq .accordion .accordion-item-body ul{
+    list-style: disc;
+    padding-left: 16px;
+}
+
+.section.faq .accordion .accordion-item-body ol{
+    list-style: decimal;
+    padding-left: 16px;
+}
+
+.section.faq details summary {
+    list-style: none; /* hides default arrow in Safari */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section.faq details summary::-webkit-details-marker {
+  display: none; /* hides default arrow in Chrome */
+}
+
+.section.faq details .accordion-item-label p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.section.faq details .accordion-item-label p::after{
+    content: url("/icons/down-arrow.svg");
+    height: 24px;
+    width: 24px;
+}
+
+.section.faq .default-content-wrapper:nth-child(3){
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+}
+
+.section.faq .default-content-wrapper:nth-child(3) p::after{
+    content: url("/icons/down-arrow.svg");
+     height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 0;
+    margin-left: 5px;
+}
+
+.section.faq details[open] .accordion-item-label p::after{
+    content: url("/icons/down-arrow.svg");
+     height: 24px;
+    width: 24px;
+    transform: rotate(180deg);
+}
+
+.section.faq .default-content-wrapper:nth-child(1){
+    font:var(--font-600);
+}
+
+.section.faq .default-content-wrapper:nth-child(3) p{
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  text-decoration: underline;
+  position: relative;
+  padding: 4px;
+}
+
+.section.faq .default-content-wrapper:nth-child(3) p:nth-child(2){
+    display: none;
+}
+
+.section.faq .default-content-wrapper:nth-child(3) p:nth-child(2)::after{
+    transform: rotate(180deg);
+}
+
+@media (width >= 900px){
+    .section.faq{
+    padding: 72px 0;
+}
+
+    .section.faq .accordion{
+    padding: 8px 48px 48px;
+    margin-top: 64px;
+    height: 628px;
+}
+
+.section.faq .accordion .accordion-container{
+    padding: 40px 0;
+}
+
+.section.faq .accordion .accordion-item-label{
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+}
+
+.section.faq .accordion .accordion-item-body{
+    font: var(--font-400);
+    letter-spacing: 0.15px;
+    padding-top: 16px;
+}
+
+.section.faq .accordion .accordion-item-body ul{
+    padding-left: 40px;
+}
+
+.section.faq .accordion .accordion-item-body ol{
+    padding-left: 16px;
+}
+
+.section.faq details .accordion-item-label p::after{
+    content: url("/icons/down-arrow.svg");
+    height: 24px;
+    width: 24px;
+}
+
+.section.faq details[open] .accordion-item-label p::after{
+     height: 32px;
+    width: 32px;
+}
+
+.section.faq .default-content-wrapper:nth-child(1){
+        font:var(--font-600);
+    letter-spacing: -0.25px;
+}
+}
+

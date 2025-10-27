@@ -1,0 +1,62 @@
+{
+  "definitions": [
+    {
+      "title": "Citymaster",
+      "id": "citymaster",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Citymaster",
+              "model": "citymaster"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "citymaster",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "col1_mobimage",
+          "label": "Mobile Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "col1_mobimageAlt",
+          "label": "Alt",
+          "value": ""
+        },
+                {
+          "component": "reference",
+          "valueType": "string",
+          "name": "col1_deskimage",
+          "label": "Desktop Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "col1_deskimageAlt",
+          "label": "Alt",
+          "value": ""
+        },
+        {
+          "component": "richtext",
+          "name": "col2_desc",
+          "value": "",
+          "label": "Desc",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}
