@@ -1,0 +1,380 @@
+.section .savings-calculator {
+  max-width: 1312px;
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.section .savings-calculator h2 {
+    text-align: center;
+  margin-bottom: 32px;
+  font: var(--font-600)
+}
+
+.section .calculator-card {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background: #f9f5ee;
+  border: 1px solid #F9F5EE;
+  border-radius: 20px;
+  padding: 24px 16px 130px;
+  position: relative;
+}
+
+.section .scale span{
+    font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1;
+  font-family: montreal-medium,sans-serif;
+  font-weight: 500;
+}
+
+.section .calculator-left > p:nth-child(1){
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    font-weight: 500;
+    font-family: montreal-medium,sans-serif;
+    color: #3F3D3D;
+}
+
+.section .calculator-left label {
+    display: block;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0;
+  font-weight: 600;
+font-family: montreal-medium,sans-serif;
+  margin-top: 64px;
+}
+ 
+.section .calculator-left label span{
+    color: #005A24;
+}
+
+.section #distance {
+  appearance: none;
+  width: 100%;
+  background: transparent;
+  margin: 44px 0 0;
+
+  --percent: 15%;
+
+  cursor: pointer;
+}
+
+/* ---------- WebKit / Blink track (Chrome, Edge, Safari) ---------- */
+
+/* track */
+.section #distance::-webkit-slider-runnable-track {
+  height: 18px;                         /* track thickness */
+  border-radius: 999px;                 /* pill shape */
+  background:
+    linear-gradient(90deg,
+      #0b9b48 0 calc(var(--percent)),
+      #fff calc(var(--percent)) 100%);
+  border: 1px solid rgb(0 0 0 / 3%);
+}
+
+/* thumb */
+.section #distance::-webkit-slider-thumb {
+  appearance: none;
+  width: 46px;            /* thumb diameter */
+  height: 46px;
+  margin-top: -14px;      /* centers thumb vertically (-(thumb - track)/2) */
+  border-radius: 50%;
+  background: #fff;    /* white center */
+  border: 3px solid #d9d9d9; /* light grey ring like Figma */
+  transition: transform 0.12s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+
+/* ---------- Firefox track/progress/thumb ---------- */
+.section #distance::-moz-range-track {
+  height: 18px;
+  border-radius: 999px;
+  background: #fff; /* base - filled portion handled by ::-moz-range-progress */
+  border: 1px solid rgb(0 0 0 / 3%);
+  box-shadow: 0 1px 0 rgb(0 0 0 / 3%);
+}
+
+.section #distance::-moz-range-progress {
+  height: 18px;
+  border-radius: 999px;
+  background: #0b9b48; /* filled green */
+}
+
+.section #distance::-moz-range-thumb {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 3px solid #d9d9d9;
+  background: #fff;
+  cursor: pointer;
+}
+
+.section .scale {
+    margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section .assumption {
+  margin-top: 32px;
+font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.25;
+  position: absolute;
+  bottom: 24px;
+  padding: 16px;
+}
+
+.section .assumption p:nth-child(1),.assumption p:nth-child(2) span {
+    font-weight: 600;
+    font-family: montreal-semibold,sans-serif;
+}
+
+.section .assumption p:nth-child(2){
+    font-weight: 400;
+    font-family: montreal-regular,sans-serif;
+}
+
+.section .calculator-right {
+    margin: 32px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 12.8px;
+}
+
+.section .calculator-right .saved p:nth-child(2){
+    font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.25;
+    font-weight: 600;
+    font-family: montreal-semibold,sans-serif;
+    color: #005A24;
+}
+
+.section .calculator-right > div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 16px;
+}
+
+.section .calculator-right > div:nth-child(1) div{
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    justify-content: space-between;
+}
+
+.section .calculator-right > div:nth-child(1) div p:nth-child(1){
+    font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.25;
+    font-weight: 600;
+    font-family: montreal-semibold,sans-serif;
+    color: #5C5A5A;
+}
+
+.section .calculator-right > div:nth-child(1) div p:nth-child(2){
+ font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.25;
+    font-weight: 600;
+    font-family: montreal-semibold,sans-serif;
+    color: #1D1B1B;
+}
+
+.section .calculator-right .saved{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding-top: 16px;
+    border-top: 1px solid #3F3D3D;
+ font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.25;
+    font-weight: 600;
+    font-family: montreal-semibold,sans-serif;
+    color: #5C5A5A;
+}
+
+@media (width >= 900px){
+  .section  .savings-calculator {
+  padding: 72px 0;
+}
+
+.section .savings-calculator h2 {
+  margin-bottom: 64px;
+  font: var(--font-600)
+}
+
+.section .calculator-card {
+  display: flex;
+  flex-direction: row;
+  gap: 176px;
+  border-radius: 32px;
+  padding: 0;
+}
+
+.section .calculator-left{
+    padding: 40px;
+}
+
+.section .calculator-left > p:nth-child(1){
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0;
+}
+
+.section .calculator-left label {
+  margin-top: 105px;
+}
+
+.section #distance {
+  appearance: none;
+  width: 100%;
+  background: transparent;
+  margin: 44px 0 0;
+
+  --percent: 15%;
+
+  cursor: pointer;
+}
+
+/* ---------- WebKit / Blink track (Chrome, Edge, Safari) ---------- */
+
+/* track */
+.section #distance::-webkit-slider-runnable-track {
+  height: 24px;                         /* track thickness */
+  border-radius: 999px;                 /* pill shape */
+  background:
+    linear-gradient(90deg,
+      #0b9b48 0 calc(var(--percent)),
+      #fff calc(var(--percent)) 100%);
+  border: 1px solid rgb(0 0 0 / 3%);
+}
+
+/* thumb */
+.section #distance::-webkit-slider-thumb {
+  appearance: none;
+  width: 46px;            /* thumb diameter */
+  height: 46px;
+  margin-top: -14px;      /* centers thumb vertically (-(thumb - track)/2) */
+  border-radius: 50%;
+  background: #fff;    /* white center */
+  border: 3px solid #d9d9d9; /* light grey ring like Figma */
+  transition: transform 0.12s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+
+/* ---------- Firefox track/progress/thumb ---------- */
+.section #distance::-moz-range-track {
+  height: 34px;
+  border-radius: 999px;
+  background: #fff; /* base - filled portion handled by ::-moz-range-progress */
+  border: 1px solid rgb(0 0 0 / 3%);
+  box-shadow: 0 1px 0 rgb(0 0 0 / 3%);
+}
+
+.section #distance::-moz-range-progress {
+  height: 34px;
+  border-radius: 999px;
+  background: #0b9b48; /* filled green */
+}
+
+.section #distance::-moz-range-thumb {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 3px solid #d9d9d9;
+  background: #fff;
+  cursor: pointer;
+}
+
+
+.section .scale {
+    margin-top: 42px;
+}
+
+.section .assumption {
+  margin-top: 105px;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.5;
+  position:static;
+  padding: 0;
+  color: #5C5A5A;
+}
+
+.section .assumption p:nth-child(1),.assumption p:nth-child(2) span {
+    font-weight: 700;
+    font-family: montreal-bold,sans-serif;
+}
+
+.section .assumption p:nth-child(2){
+    font-weight: 500;
+    font-family: montreal-medium,sans-serif;
+}
+
+.section .calculator-right {
+  margin: 8px;
+  padding: 56px 86px;
+  border-radius: 24px;
+  flex: 1 0 35%;
+}
+
+.section .calculator-right > div:nth-child(1){
+    gap: 0;
+    padding-bottom: 0;
+}
+
+.section .calculator-right .saved p:nth-child(2){
+    font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0;
+    color: #00B348;
+}
+
+.section .calculator-right > div:nth-child(1) div{
+    gap: 90px;
+    padding-bottom: 40px;
+}
+
+.section .calculator-right > div:nth-child(1) div p:nth-child(1){
+    font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.15;
+    font-weight: 400;
+    font-family: montreal-regular,sans-serif;
+}
+
+.section .calculator-right > div:nth-child(1) div p:nth-child(2){
+ font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0;
+    font-weight: 600;
+    font-family: montreal-semibold,sans-serif;
+    color: #1D1B1B;
+}
+
+.section .calculator-right .saved{
+    gap: 90px;
+    padding-top: 40px;
+ font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1;
+    color: #1D1B1B;
+    margin-top: auto;
+}
+}

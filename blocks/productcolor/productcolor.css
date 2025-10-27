@@ -1,0 +1,113 @@
+.section.productcolor-container{
+    max-width: 1312px;
+    margin: 0 auto;
+    padding: 64px 0;
+}
+
+.section .productcolor{
+    display: flex;
+    position: relative;
+}
+
+.section .productcolor > div{
+    position: relative;
+    width: 100%;
+}
+
+.section .productcolor > div > div:nth-child(2){
+    display: flex;
+    justify-content: center;
+}
+
+.section .productcolor > div > div:nth-child(2) p:nth-child(1){
+    position: absolute;
+    top: 0;
+    text-align: center;
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: 0.1px;
+    font-weight: 600;
+    font-family: montreal-semibold,sans-serif;
+    color: #DFDFDF;
+    z-index: -1;
+}
+
+.section .productcolor > div > div:nth-child(2) p:nth-child(2){
+    display: none;
+}
+
+.section .productcolor .color-dots{
+    width: 100%;
+    position: absolute;
+    bottom: 6%;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    height: auto;
+}
+
+.section .productcolor .color-dots .dot{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 52px;
+}
+
+.section .productcolor .color-dots .dot.active{
+    width: 118px;
+}
+
+.section .productcolor .productcolor-variant div:nth-child(1){
+    display: flex;
+    justify-content: center;
+}
+
+.section .productcolor .productcolor-variant img{
+    height: 308px;
+}
+
+.section.productcolor-container .default-content-wrapper h2{
+         font: var(--font-600);
+    margin-bottom: 32px;
+}
+
+.section.productcolor-container .default-content-wrapper h2 strong{
+    color: #FF5310;
+}
+
+@media (width >= 900px) {
+.section.productcolor-container{
+    padding: 88px 0;
+}
+
+.section .productcolor > div > div:nth-child(2) p:nth-child(1){
+    top: 0;
+    font-size: 128px;
+    line-height: 104px;
+    letter-spacing: -0.25px;
+}
+
+.section .productcolor .color-dots{
+    bottom: 6%;
+}
+
+.section .productcolor .color-dots .dot{
+    width: 44px;
+    height: 44px;
+}
+
+.section .productcolor .color-dots .dot.active{
+    width: 153px;
+}
+
+.section .productcolor .productcolor-variant img{
+    height: 635px;
+}
+
+.section.productcolor-container .default-content-wrapper h2{
+         font: var(--font-600);
+    letter-spacing: -0.25px;
+    margin-bottom: 58px;
+}   
+    
+}

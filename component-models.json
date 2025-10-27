@@ -254,6 +254,25 @@
     ]
   },
   {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "heading",
+        "label": "Accordion Heading",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "summary",
+        "label": "Accordion Summary",
+        "valueType": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -268,6 +287,122 @@
         "name": "text",
         "value": "",
         "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "col1_mobimage",
+        "label": "Mob Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_mobimageAlt",
+        "label": "Alt Text",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "name": "col1_deskimage",
+        "label": "Desk Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_deskimageAlt",
+        "label": "Alt Text",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col1_desc",
+        "value": "",
+        "label": "Card description",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "carousel-card-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "col1_mobimage",
+        "label": "Mob Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_mobimageAlt",
+        "label": "Alt Text",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "name": "col1_deskimage",
+        "label": "Desk Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_deskimageAlt",
+        "label": "Alt Text",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_desc",
+        "value": "",
+        "label": "Card description",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "citymaster",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_mobimage",
+        "label": "Mobile Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_mobimageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_deskimage",
+        "label": "Desktop Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_deskimageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_desc",
+        "value": "",
+        "label": "Desc",
         "valueType": "string"
       }
     ]
@@ -349,6 +484,92 @@
         "name": "col1_desc",
         "value": "",
         "label": "Card description",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "productcolor-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col1_imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_title",
+        "value": "",
+        "label": "Card Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_color",
+        "value": "",
+        "label": "Card Color",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "tab",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Tab Style",
+            "value": "tab-style"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tab-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Hamburger Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Head Image Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image2",
+        "label": "Cross Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_image2Alt",
+        "label": "Cross Image Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Body Content",
         "valueType": "string"
       }
     ]

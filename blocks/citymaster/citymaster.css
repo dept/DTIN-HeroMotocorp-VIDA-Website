@@ -1,0 +1,147 @@
+.section.dealership{
+    max-width: 1312px;
+    margin: 0 auto;
+    padding: 48px 0;
+}
+
+.section.dealership .default-content-wrapper h2{
+     font: var(--font-600);
+    text-align: center;
+}
+
+.section.dealership .citymaster-wrapper{
+    margin-top: 32px;
+    padding: 0;
+}
+
+.section.dealership .citymaster{
+     position: relative;
+}
+
+.section.dealership .citymaster > div:nth-child(1) p img{
+    z-index: -1;
+    width: 100vw;
+    border-radius: 24px;
+}
+
+.section.dealership .citymaster > div:nth-child(1) p:nth-child(2){
+    display: none;
+}
+
+.section.dealership .citymaster > div:nth-child(2){
+    background-color: #F9F5EE;
+    border-radius: 12.8px;
+    padding: 24px;
+    position: absolute;
+    bottom: 0;
+    margin: 16px;
+}
+
+
+.section.dealership .citymaster > div:nth-child(2) p:nth-child(1){
+    font:var(--font-card);
+    letter-spacing: 0.25px;
+    padding-top: 24px;
+}
+
+.section.dealership .citymaster > div:nth-child(2) p:nth-child(2){
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0;
+    font-family: montreal-semibold,sans-serif;
+    font-weight: 600;
+    padding-top: 24px;
+    color: #FF5310;
+}
+
+.section.dealership .citymaster > div:nth-child(2) p:nth-child(3){
+    font: var(--font-400);
+    padding-top: 8px;
+    letter-spacing: 0.25px;
+}
+
+.section.dealership .button-container{
+    text-align: center;
+    padding-top: 52px;
+}
+
+.section.dealership .button-container a{
+    background-color: black;
+    color: #fff;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: montreal-semibold,sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.25px;
+}
+
+@media (width >= 900px){
+    .section.dealership{
+    padding: 72px 0;
+}
+
+.section.dealership .default-content-wrapper h2{
+    font: var(--font-600);
+}
+
+.section.dealership .citymaster-wrapper{
+    margin-top: 64px;
+    padding: 0;
+}
+
+.section.dealership .citymaster > div:nth-child(1) p:nth-child(1){
+    display: none;
+}
+
+.section.dealership .citymaster > div:nth-child(1) p:nth-child(2){
+    display: block;
+}
+
+.section.dealership .citymaster > div:nth-child(2){
+    border-radius: 16px;
+    padding: 32px;
+    top: 8px;
+    right: 8px;
+    bottom: 8px;
+    margin: 0;
+    height: calc(100% - 16px);
+    width: 403px;
+    box-sizing: border-box;
+}
+
+.section.dealership .citymaster > div:nth-child(2) div{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.section.dealership .citymaster > div:nth-child(2) p:nth-child(1){
+        font:var(--font-card);
+    letter-spacing: 0.1px;
+    padding-top: 32px;
+}
+
+.section.dealership .citymaster > div:nth-child(2) p:nth-child(2){
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -0.25;
+}
+
+.section.dealership .citymaster > div:nth-child(2) p:nth-child(3){
+        font: var(--font-400);
+    letter-spacing: 0.15px;
+    padding-top: 4px;
+}
+
+.section.dealership .button-container{
+    text-align: left;
+    margin-top: auto;
+}
+}
+
+
+
+
+

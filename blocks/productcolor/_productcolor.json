@@ -1,0 +1,74 @@
+{
+    "definitions": [
+        {
+            "title": "Productcolor",
+            "id": "productcolor",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block",
+                        "template": {
+                            "name": "Productcolor",
+                            "filter": "productcolor"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "title": "Productcolor Item",
+            "id": "productcolor-item",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block/item",
+                        "template": {
+                            "name": "Productcolor Item",
+                            "model": "productcolor-item"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "models": [
+        {
+            "id": "productcolor-item",
+            "fields": [
+                {
+                    "component": "reference",
+                    "name": "col1_image",
+                    "label": "Image",
+                    "multi": false
+                },
+                {
+                    "component": "text",
+                    "name": "col1_imageAlt",
+                    "label": "Alt Text"
+                },
+                {
+                    "component": "richtext",
+                    "name": "col2_title",
+                    "value": "",
+                    "label": "Card Title",
+                    "valueType": "string"
+                },
+                {
+                    "component": "richtext",
+                    "name": "col2_color",
+                    "value": "",
+                    "label": "Card Color",
+                    "valueType": "string"
+                }
+            ]
+        }
+    ],
+    "filters": [
+        {
+            "id": "productcolor",
+            "components": [
+                "productcolor-item"
+            ]
+        }
+    ]
+}

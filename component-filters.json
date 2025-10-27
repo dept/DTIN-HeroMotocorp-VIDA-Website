@@ -17,13 +17,32 @@
       "columns",
       "fragment",
       "teaser",
-      "pricecity"
+      "citymaster",
+      "carousel",
+      "accordion",
+      "productcolor",
+      "pricecity",
+      "calculator",
+      "tab"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "carousel-item",
+      "carousel-card-item"
     ]
   },
   {
@@ -39,6 +58,18 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "productcolor",
+    "components": [
+      "productcolor-item"
+    ]
+  },
+  {
+    "id": "tab",
+    "components": [
+      "tab-item"
     ]
   },
   {
