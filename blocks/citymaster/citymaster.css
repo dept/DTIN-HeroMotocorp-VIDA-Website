@@ -126,7 +126,7 @@
 .section.dealership .citymaster > div:nth-child(2) p:nth-child(2){
     font-size: 72px;
     line-height: 72px;
-    letter-spacing: -0.25;
+    letter-spacing: -0.25px;
 }
 
 .section.dealership .citymaster > div:nth-child(2) p:nth-child(3){

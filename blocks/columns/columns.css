@@ -247,7 +247,7 @@
 
 .section.rectangle-bg .columns > div > div:nth-child(2) p:nth-child(1){
     font:var(--font-600);
-  letter-spacing: 0.1;
+  letter-spacing: 0.1px;
 }
 
 .section.rectangle-bg .columns > div > div:nth-child(2) p:nth-child(2){

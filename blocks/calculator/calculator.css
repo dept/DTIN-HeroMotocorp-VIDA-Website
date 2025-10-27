@@ -24,7 +24,7 @@
 .section .scale span{
     font-size: 20px;
   line-height: 24px;
-  letter-spacing: 0.1;
+  letter-spacing: 0.1px;
   font-family: montreal-medium,sans-serif;
   font-weight: 500;
 }
@@ -125,7 +125,7 @@ font-family: montreal-medium,sans-serif;
   margin-top: 32px;
 font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0.25;
+  letter-spacing: 0.25px;
   position: absolute;
   bottom: 24px;
   padding: 16px;
@@ -154,7 +154,7 @@ font-size: 16px;
 .section .calculator-right .saved p:nth-child(2){
     font-size: 20px;
   line-height: 24px;
-  letter-spacing: 0.25;
+  letter-spacing: 0.25px;
     font-weight: 600;
     font-family: montreal-semibold,sans-serif;
     color: #005A24;
@@ -177,7 +177,7 @@ font-size: 16px;
 .section .calculator-right > div:nth-child(1) div p:nth-child(1){
     font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0.25;
+  letter-spacing: 0.25px;
     font-weight: 600;
     font-family: montreal-semibold,sans-serif;
     color: #5C5A5A;
@@ -186,7 +186,7 @@ font-size: 16px;
 .section .calculator-right > div:nth-child(1) div p:nth-child(2){
  font-size: 20px;
   line-height: 24px;
-  letter-spacing: 0.25;
+  letter-spacing: 0.25px;
     font-weight: 600;
     font-family: montreal-semibold,sans-serif;
     color: #1D1B1B;
@@ -201,7 +201,7 @@ font-size: 16px;
     border-top: 1px solid #3F3D3D;
  font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0.25;
+  letter-spacing: 0.25px;
     font-weight: 600;
     font-family: montreal-semibold,sans-serif;
     color: #5C5A5A;
@@ -311,7 +311,7 @@ font-size: 16px;
   margin-top: 105px;
   font-size: 14px;
   line-height: 18px;
-  letter-spacing: 0.5;
+  letter-spacing: 0.5px;
   position:static;
   padding: 0;
   color: #5C5A5A;
@@ -354,7 +354,7 @@ font-size: 16px;
 .section .calculator-right > div:nth-child(1) div p:nth-child(1){
     font-size: 20px;
   line-height: 28px;
-  letter-spacing: 0.15;
+  letter-spacing: 0.15px;
     font-weight: 400;
     font-family: montreal-regular,sans-serif;
 }
@@ -373,7 +373,7 @@ font-size: 16px;
     padding-top: 40px;
  font-size: 24px;
   line-height: 32px;
-  letter-spacing: 0.1;
+  letter-spacing: 0.1px;
     color: #1D1B1B;
     margin-top: auto;
 }
