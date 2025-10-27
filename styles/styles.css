@@ -398,6 +398,7 @@ justify-content: flex-end;
 
 .section.rectangle-bg .default-content-wrapper p:nth-child(2) img{
   display: block;
+  height: auto;
 }
 
 .section.rectangle-bg .default-content-wrapper p:nth-child(1) img{
