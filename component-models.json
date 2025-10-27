@@ -523,8 +523,8 @@
     "fields": [
       {
         "component": "multiselect",
-        "name": "style",
-        "label": "Style",
+        "name": "class",
+        "label": "class",
         "options": [
           {
             "name": "Tab Style",
