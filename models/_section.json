@@ -31,8 +31,120 @@
           "label": "Style",
           "options": [
             {
-              "name": "Highlight",
-              "value": "highlight"
+              "name": "Top Left",
+              "value": "top-left"
+            },
+            {
+              "name": "Top Center",
+              "value": "top-center"
+            },
+            {
+              "name": "Top Right",
+              "value": "top-right"
+            },
+            {
+              "name": "Center Left",
+              "value": "center-left"
+            },
+            {
+              "name": "Center Center",
+              "value": "center-center"
+            },
+            {
+              "name": "Center Right",
+              "value": "center-right"
+            },
+            {
+              "name": "Bottom Left",
+              "value": "bottom-left"
+            },
+            {
+              "name": "Bottom Center",
+              "value": "bottom-center"
+            },
+            {
+              "name": "Bottom Right",
+              "value": "bottom-right"
+            },
+            {
+              "name": "Hero Main",
+              "value": "hero-main"
+            },
+            {
+              "name": "Hero Component",
+              "value": "hero-component"
+            },
+            {
+              "name": "Rectangle",
+              "value": "rectangle"
+            },
+            {
+              "name": "Rectangle BG",
+              "value": "rectangle-bg"
+            },
+            {
+              "name": "Locate Charger",
+              "value": "locate-charger"
+            },
+            {
+              "name": "Column Cards",
+              "value": "column-cards"
+            },
+            {
+              "name": "Accessories",
+              "value": "accessories"
+            },
+            {
+              "name": "Carousel Cards",
+              "value": "carousel-cards"
+            },
+            {
+              "name": "Scooty Features",
+              "value": "scooty-features"
+            },
+            {
+              "name": "Teaser Card",
+              "value": "teaser-card"
+            },
+            {
+              "name": "FAQ",
+              "value": "faq"
+            },
+            {
+              "name": "Dealership",
+              "value": "dealership"
+            },
+            {
+              "name": "Compare",
+              "value": "compare"
+            },
+            {
+              "name": "Head Accordion",
+              "value": "head-accordion"
+            },
+            {
+              "name": "Buy Style",
+              "value": "buy-style"
+            },
+            {
+              "name": "Tab Container Style",
+              "value": "tab-cnt-style"
+            },
+            {
+              "name": "Footer Address Container",
+              "value": "footer-address-container"
+            },
+            {
+              "name": "Footer Accordion",
+              "value": "footer-accordion"
+            },
+            {
+              "name": "Terms Service Container",
+              "value": "terms-service-container"
+            },
+            {
+              "name": "Registered Address",
+              "value": "registered-address"
             }
           ]
         }
@@ -50,7 +162,15 @@
         "hero",
         "cards",
         "columns",
-        "fragment"
+        "fragment",
+        "teaser",
+        "citymaster",
+        "carousel",
+        "accordion",
+        "productcolor",
+        "pricecity",
+        "calculator",
+        "tab"
       ]
     }
   ]
