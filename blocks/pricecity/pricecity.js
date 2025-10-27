@@ -12,17 +12,15 @@ function buildCell(rowIndex) {
 }
 
 const dropdown = priceData.v2Pro
-  .map((city) => `<div class="city-option" value=${city.city_state_id.split("~")[0]}>${city.city_state_id.split("~")[0]}</div>`).join("")
+  .map((city) => `<div class="city-option" value=${city.city_state_id.split('~')[0]}>${city.city_state_id.split('~')[0]}</div>`).join('');
 
-  console.log(dropdown);
+console.log(dropdown);
 
+//   function makeCityDropDown(){
 
-  function makeCityDropDown(){
+//   }
 
-  }
-
-  makeCityDropDown(priceData.v2Pro);
-
+// makeCityDropDown(priceData.v2Pro);
 
 function getLiElements(el) {
   const ul = el.querySelector('ul');
