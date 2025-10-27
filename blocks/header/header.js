@@ -71,7 +71,7 @@ export default async function decorate(block) {
   const navMeta = getMetadata('nav');
   const mobNavMeta = getMetadata('mob-nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
-  const mobNavPath = mobNavMeta ? new URL(mobNavMeta, window.location).pathname : '/nav-mobile';
+  const mobNavPath = mobNavMeta ? new URL(mobNavMeta, window.location).pathname : '/mob-nav';
   let fragment;
   if (isMobile.matches) {
     fragment = await loadFragment(mobNavPath);
