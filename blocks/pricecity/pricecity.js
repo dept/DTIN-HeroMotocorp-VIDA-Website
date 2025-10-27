@@ -3,12 +3,24 @@
  * Recreate a table
  * https://www.hlx.live/developer/block-collection/table
  */
+import { priceData } from '../../scripts/common.js';
 
 function buildCell(rowIndex) {
   const cell = rowIndex ? document.createElement('td') : document.createElement('th');
   if (!rowIndex) cell.setAttribute('scope', 'col');
   return cell;
 }
+
+const dropdown = priceData.v2Pro
+  .map((city) => `<div class="city-option" value=${city.city_state_id.split('~')[0]}>${city.city_state_id.split('~')[0]}</div>`).join('');
+
+console.log(dropdown);
+
+//   function makeCityDropDown(){
+
+//   }
+
+// makeCityDropDown(priceData.v2Pro);
 
 function getLiElements(el) {
   const ul = el.querySelector('ul');

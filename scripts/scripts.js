@@ -13,6 +13,8 @@ import {
   toClassName,
 } from './aem.js';
 
+import './common.js';
+
 const experimentationIndex = '../plugins/experimentation/src/index.js';
 const experimentationConfig = {
   prodHost: 'www.my-site.com',
@@ -33,6 +35,7 @@ if (isExperimentationEnabled) {
     loadLazy: showExperimentationOverlay,
   } = await import(experimentationIndex));
 }
+
 /**
  * Moves all the attributes from a given elmenet to another given element.
  * @param {Element} from the element to copy attributes from
