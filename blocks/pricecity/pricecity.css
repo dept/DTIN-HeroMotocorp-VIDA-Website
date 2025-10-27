@@ -209,3 +209,10 @@
 }
 
 }
+
+/* Price City css Dropdown */
+
+.section .city-wrapper{
+    display: flex;
+    position: relative;
+}
