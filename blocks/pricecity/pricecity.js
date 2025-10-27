@@ -3,7 +3,7 @@
  * Recreate a table
  * https://www.hlx.live/developer/block-collection/table
  */
-import { priceData } from '../../scripts/common.js';
+// import { priceData } from '../../scripts/common.js';
 
 function buildCell(rowIndex) {
   const cell = rowIndex ? document.createElement('td') : document.createElement('th');
@@ -11,16 +11,23 @@ function buildCell(rowIndex) {
   return cell;
 }
 
-const dropdown = priceData.v2Pro
-  .map((city) => `<div class="city-option" value=${city.city_state_id.split('~')[0]}>${city.city_state_id.split('~')[0]}</div>`).join('');
+// const dropdown = priceData?.v2Pro
+// eslint-disable-next-line max-len
+//   .map((city) => `<div class="city-option" value=${city.city_state_id.split('~')[0]}>${city.city_state_id.split('~')[0]}</div>`).join('');
 
-console.log(dropdown);
+// // debugger;
 
-//   function makeCityDropDown(){
+// console.log(dropdown);
 
-//   }
+// function makeCityDropDown(priceData, dropdown) {
+//   const cityWrapp = document.createElement('div');
+//   cityWrapp.classList.add('city-wrapper');
+//   cityWrapp.innerHTML = dropdown;
+//   return cityWrapp;
+//   console.log(cityWrapp);
+// }
 
-// makeCityDropDown(priceData.v2Pro);
+// let selectWrapp = document.createElement('div');
 
 function getLiElements(el) {
   const ul = el.querySelector('ul');
@@ -122,4 +129,6 @@ export default function decorateTable(block) {
       }
     }
   });
+
+  // block.appendChild(makeCityDropDown(priceData, dropdown));
 }
