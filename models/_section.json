@@ -164,13 +164,7 @@
         "columns",
         "fragment",
         "teaser",
-        "citymaster",
-        "carousel",
-        "accordion",
-        "productcolor",
-        "pricecity",
-        "calculator",
-        "tab"
+        "pricecity"
       ]
     }
   ]
