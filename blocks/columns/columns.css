@@ -11,12 +11,158 @@
   order: 1;
 }
 
+.section.locate-charger .columns > div{
+  flex-direction: column-reverse;
+  gap: 40px;
+}
+
 .columns > div > .columns-img-col {
   order: 0;
 }
 
 .columns > div > .columns-img-col img {
   display: block;
+}
+
+.section.rectangle{
+  overflow: hidden;
+  padding: 48px 0;
+}
+
+.section.rectangle-bg{
+  min-height: 865px;
+}
+
+.section.rectangle-bg .columns > div{
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+      z-index: 1;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(to bottom, transparent 0 475px, #f9f4ec 48% 100%);
+}
+
+ .section.rectangle .columns-img-col img{
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  left: 0;
+  transform: scale(1.6);
+  bottom: 30%;
+  object-fit: contain;
+}
+
+
+.section.rectangle .columns{
+  margin-top: 182px;
+  position: relative;
+}
+
+
+.section.rectangle .columns > div > div:nth-child(2){
+  background-color: #EFEBE3;
+  height: 193px;
+  width: 100%;
+  border-radius: 40px;
+}
+
+.section.rectangle-bg .columns-wrapper{
+  padding: 17px 16px;
+}
+
+.section.rectangle-bg .columns > div > div:nth-child(1){
+  height: 480px;
+  border-radius: inherit;
+  background-color: inherit;
+  isolation: isolate;
+  backdrop-filter: none;
+  border: 8px solid #f9f4ec;
+  box-sizing: border-box;
+}
+
+.section.rectangle-bg .columns > div > div:nth-child(1)::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: transparent;
+  backdrop-filter: none;
+  z-index: -1;
+  border: 4px solid #f9f4ec;
+}
+
+.section.rectangle-bg .columns > div > div:nth-child(2){
+  padding: 24px;
+}
+
+.section.rectangle-bg .columns > div > div:nth-child(2) p:nth-child(1){
+  font:var(--font-600);
+  color: #1D1B1B
+}
+
+.section.rectangle-bg .columns > div > div:nth-child(2) p:nth-child(2){
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.15px;
+  color: #3F3D3D;
+  padding-top: 16px;
+  font-family: montreal-regular,sans-serif;
+  font-weight: 400;
+}
+
+
+.section.locate-charger .columns > div > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section.locate-charger .columns > div > div:nth-child(1) p:nth-child(1){
+  font: var(--font-600);
+  color: #1D1B1B;
+  text-align: center;
+}
+
+.section.locate-charger .columns > div > div:nth-child(1) p:nth-child(2) a{
+  font-size:20px;
+  width: 306px;
+  height: 48px;
+  line-height:24px;
+  color: #fff;
+  background-color: black;
+  font-family: montreal-semibold,sans-serif;
+  font-weight: 600;
+}
+
+.section.locate-charger .columns > div > div:nth-child(1) > ul{
+  display: flex;
+}
+
+.section.locate-charger .columns > div > div:nth-child(1) > ul > li:nth-child(1){
+  padding-right: 49px;
+}
+
+.section.locate-charger .columns > div > div:nth-child(1) > ul > li:nth-child(2){
+  padding-left: 49px;
+  border-left: 1px solid #E6E6E6;
+}
+
+.section.locate-charger .columns > div > div:nth-child(1) ul li ul li:nth-child(1){
+  color: #FF5310;
+  font-size: 40px;
+  line-height: 48px;
+  font-family: montreal-semibold,sans-serif;
+  font-weight: 600;
+}
+
+.section.locate-charger .columns > div > div:nth-child(1) ul li ul li:nth-child(2){
+  padding-top: 4px;
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.25px;
+  font-family: montreal-regular,sans-serif;
+  font-weight: 400;
 }
 
 @media (width >= 900px) {
@@ -30,4 +176,128 @@
     flex: 1;
     order: unset;
   }
+
+  .section.rectangle .columns{
+  margin-top: 327px;
+  position: relative;
+}
+
+.section.rectangle-bg{
+  min-height: auto;
+}
+
+.section.rectangle-bg .columns > div{
+  flex-direction: row-reverse;
+  align-items: stretch;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+  background: linear-gradient(
+    to right,
+    #f9f4ec 0 652px,   /* left half (content) */
+    transparent 50% 100% /* right half (empty div) */
+  );
+}
+
+.section.locate-charger .columns > div{
+  flex-direction: row;
+  gap: 108px;
+  align-items: flex-start;
+}
+
+.section.rectangle .columns > div{
+  display: block;
+}
+
+.section.rectangle .columns-img-col img{
+  position: absolute;
+  width: 1032px;
+  height: 528px;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.section.rectangle .columns > div > div:nth-child(2){
+  height: 314px;
+  width: 100%;
+}
+
+.section.rectangle-bg .default-content-wrapper p:nth-child(2) img{
+  display: block;
+}
+
+.section.rectangle-bg .default-content-wrapper p:nth-child(1) img{
+  display: none;
+}
+
+.section.rectangle-bg .columns-wrapper{
+  padding: 67px 0;
+}
+
+.section.rectangle-bg .columns > div > div:nth-child(1){
+  height: 656px;
+}
+
+.section.rectangle-bg .columns > div > div:nth-child(2){
+  background-color: #F9F5EE;
+  padding: 48px;
+  border-radius: 0 14px 14px 0;
+  flex: 0 0 40%;
+}
+
+
+.section.rectangle-bg .columns > div > div:nth-child(2) p:nth-child(1){
+    font:var(--font-600);
+  letter-spacing: 0.1px;
+}
+
+.section.rectangle-bg .columns > div > div:nth-child(2) p:nth-child(2){
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+}
+
+
+.section.locate-charger .columns > div > div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex : 0 0 40%
+}
+
+.section.locate-charger .columns > div > div:nth-child(1) p:nth-child(1){
+    font: var(--font-600);
+  color: #1D1B1B;
+}
+
+.section.locate-charger .columns > div > div:nth-child(1) p:nth-child(2){
+  margin-top: 40px;
+}
+
+.section.locate-charger .columns > div > div:nth-child(1) > ul{
+  display: block;
+  padding-top: 49px;
+}
+
+.section.locate-charger .columns > div > div:nth-child(1) > ul > li:nth-child(1){
+  padding-right: 0;
+  padding-bottom: 32px;
+}
+
+.section.locate-charger .columns > div > div:nth-child(1) > ul > li:nth-child(2){
+  padding-left: 0;
+  border-left: none;
+  border-top: 1px solid #E6E6E6;
+  padding-top: 32px;
+}
+
+.section.locate-charger .columns > div > div:nth-child(1) ul li ul li:nth-child(1){
+  color: #FF5310;
+  font-size: 72px;
+  line-height: 72px;
+  letter-spacing: -0.25px;
+}
+
+.section.locate-charger .columns > div > div:nth-child(1) ul li ul li:nth-child(2){
+  font-size: 32px;
+}
 }

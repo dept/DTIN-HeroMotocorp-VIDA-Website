@@ -1,0 +1,228 @@
+.tab.tab-style .tab-list {
+  display: flex;
+  gap: 0.5ch;
+  max-width: 100%;
+  font-size: var(--body-font-size-xs);
+}
+
+@media (width >= 600px) {
+  .tab .tab-list {
+    font-size: var(--body-font-size-s);
+  }
+}
+
+@media (width >= 900px) {
+  .tab .tab-list {
+    font-size: var(--body-font-size-m);
+  }
+}
+
+.tab .tab-list button {
+  flex: 0 0 max-content;
+  margin: 0;
+  border: 1px solid #dadada;
+  border-radius: 0;
+  padding: 0.5em;
+  background-color: var(--light-color);
+  color: initial;
+  font-weight: bold;
+  line-height: unset;
+  text-align: initial;
+  text-overflow: unset;
+  overflow: unset;
+  white-space: unset;
+  transition: background-color 0.2s;
+}
+
+.tab .tab-list button p {
+  margin: 0;
+}
+
+
+.tab .tab-list button[aria-selected='true'] {
+  border-bottom: 1px solid var(--background-color);
+  background-color: var(--background-color);
+  cursor: initial;
+}
+
+.tab .tab-panel {
+  margin-top: -1px;
+  padding: 24px;
+  border: 1px solid #dadada;
+  overflow: auto;
+}
+
+.tab .tab-panel[aria-hidden='true'] {
+  display: none;
+}
+
+/* Tab Component CSS */
+
+@media (width < 768px){
+    .tab-cnt-style .tab-style .tab-panel .accordion-item-label p{
+    font-family: 'PP Montreal Medium', sans-serif;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: #1d1b1b !important;
+    letter-spacing: .1px;
+    padding: 5px 0 !important;
+}
+
+    .section.tab-cnt-style .tab-style .tab-panel > div ul li p {
+    font-size: 14px;
+    font-weight: 450;
+    letter-spacing: .4px;
+    color: #5c5a5a;
+    cursor: pointer;
+    font-style: normal;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    font-family: 'PP Montreal Medium', sans-serif;
+}
+
+
+.block.tab-style .tab-list .tab-tab p:nth-child(1){
+    margin-bottom: 8px;
+    width: 40px;
+    height: 34px;
+}
+
+.block.tab-style .tab-list .tab-tab p:nth-child(1) img {
+    width: 40px;
+    height: 34px;
+}
+
+.block.tab-style .tab-list .tab-tab p:nth-child(2) img {
+    width: 16px;
+    height: 16px;
+}
+
+.block.tab-style .tab-list .tab-tab p:nth-child(2){
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+    width: 32px;
+    height: 32px;
+}
+
+.block.tab-style .tab-tab{
+    all: unset;
+}
+
+.section.tab-container .default-content-wrapper{
+    padding: 0;
+    margin: initial;
+}
+
+.section.tab-container .tab-wrapper{
+    margin: initial;
+    padding: 0;
+}
+
+.section.tab-container.tab-cnt-style{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.block.tab-style .tab-panel{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    background: white;
+    width: 100%;
+    border: none;
+    padding: 0;
+    z-index: 1;
+    max-height: 100vh;
+}
+
+.block.tab-style .tab-panel > div{
+    position: relative;
+    padding:0 24px 190px;
+}
+
+.section.tab-cnt-style .tab-style .tab-panel ul,.section.tab-cnt-style .tab-style .tab-panel ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.section.tab-cnt-style .tab-style .tab-panel > div > ol li{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .1px;
+    line-height: 24px;
+    color: #5c5a5a;
+    font-family: 'PP Montreal Medium', sans-serif;;
+    padding-bottom: 10px;
+}
+
+.section.tab-cnt-style .tab-style .tab-panel > div > ul > li{
+    padding:24px 0;
+    border-bottom: 1px solid #dcdcdd;
+}
+
+ .section.tab-cnt-style .tab-style .tab-panel > div > ul li ul li{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .1px;
+    line-height: 24px;
+    padding: 4px 0;
+    font-family: 'PP Montreal Medium', sans-serif;
+}
+
+ .section.tab-cnt-style .tab-style .tab-panel .accordion-item-body li{
+    font-family: "PP Montreal Book",sans-serif;
+ }
+
+.section.tab-cnt-style .tab-style .tab-panel > div > ol{
+    padding:24px 0;
+}
+
+
+.tab-cnt-style .tab-style .tab-panel .accordion-item-label{
+    list-style: none;
+    position: relative;
+}
+
+.tab-cnt-style .tab-style .tab-panel .accordion-item-label p::before{
+  position: absolute;
+  right: -7px;
+  top: 5px;
+    content: '';
+      display: inline-block;
+      width: 0.5em; /* Adjust size as needed */
+      height: 0.5em; /* Adjust size as needed */
+      border-top: 0.1em solid currentcolor;
+      border-right: 0.1em solid currentcolor;
+      transform: rotate(135deg);
+      margin-left: 0.2em;
+}
+
+.section .tab-style .accordion-item.active .accordion-item-label p{
+  color: #ff5310 !important;
+}
+
+.section .tab-style .accordion-item.active .accordion-item-label p::before{
+      transform: rotate(315deg);
+      top: 15px;
+}
+
+header .nav .tab-cnt-style{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tab-cnt-style .tab-panel .accordion-item-label p strong{
+      background-color: rgb(0 179 72);
+    color: #fff;
+    padding: 2px 6px;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+}
