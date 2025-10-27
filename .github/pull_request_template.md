@@ -3,5 +3,5 @@ Please always provide the [GitHub issue(s)](../issues) your PR is for, as well a
 Fix #<gh-issue-id>
 
 Test URLs:
-- Before: https://main--DTIN-HeroMotocorp-VIDA-Website--dept.aem.live/
-- After: https://<branch>--DTIN-HeroMotocorp-VIDA-Website--dept.aem.live/
+- Before: https://main--dtin-heromotocorp-vida-website--dept.aem.live/
+- After: https://<branch>--dtin-heromotocorp-vida-website--dept.aem.live/
