@@ -50,6 +50,11 @@
     justify-content: flex-end;
 }
 
+.section.compare .pricecity thead tr th p img{
+    width: 70%;
+    max-width: 74px;
+}
+
 .section.compare .pricecity tbody tr{
     padding: 20px 24px 0;
 }
@@ -167,6 +172,11 @@
 
 .section.compare .pricecity thead tr th p{
     justify-content: center;
+}
+
+.section.compare .pricecity thead tr th p img{
+    width: 94px;
+    max-width: 100%;
 }
 
 .section.pricecity-container .default-content-wrapper:nth-child(3) p{

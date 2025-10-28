@@ -76,7 +76,7 @@
   background-color: inherit;
   isolation: isolate;
   backdrop-filter: none;
-  border: 8px solid #f9f4ec;
+  border: 6px solid #f9f4ec;
   box-sizing: border-box;
 }
 

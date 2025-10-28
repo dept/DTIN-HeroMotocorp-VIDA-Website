@@ -42,7 +42,7 @@
 
 /* Tab Component CSS */
 
-@media (width < 768px){
+@media (width <= 900px){
 .tab-style .tab-list .tab-tab p:nth-child(1){
     margin-bottom: 8px;
     width: 40px;
