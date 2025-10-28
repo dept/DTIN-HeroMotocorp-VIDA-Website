@@ -559,7 +559,7 @@ footer .footer>div {
   }
 }
 
-@media (width<768px){
+@media (width<=900px){
   footer .footer>div{
     padding-bottom: 64px;
   }
@@ -567,7 +567,7 @@ footer .footer>div {
 
 /* Registered Address Contianer */
 
-@media (width<768px){
+@media (width<=900px){
   .section.registered-address{
     display: none;
   }
