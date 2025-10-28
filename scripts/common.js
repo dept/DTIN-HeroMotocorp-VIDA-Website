@@ -18,7 +18,6 @@ export default async function fetchAPI(method, url, payload) {
     apiProxy[key] = data;
     return data;
   } catch (err) {
-    console.error(err);
     return err;
   }
 }
@@ -27,7 +26,6 @@ export default async function fetchAPI(method, url, payload) {
 const priceMaster = await fetchAPI('GET', 'https://www.vidaworld.com/content/dam/vida/config/price-master.json.gzip');
 // eslint-disable-next-line prefer-const, no-unused-vars
 let cityMaster = await fetchAPI('GET', 'https://www.vidaworld.com/content/dam/vida/config/city-master.json.gzip');
-console.log(priceMaster);
 
 let v2Lite = {}; let v2Pro = {}; let v2Plus = {};
 
@@ -57,7 +55,7 @@ try {
     return cityA.localeCompare(cityB);
   });
 } catch (error) {
-  console.log(error);
+  // Handle error
 }
 export const priceData = {
   v2Lite,
