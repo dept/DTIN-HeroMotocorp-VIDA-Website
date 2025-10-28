@@ -1,9 +1,10 @@
+/* eslint-disable quotes */
 /*
  * Table Block
  * Recreate a table
  * https://www.hlx.live/developer/block-collection/table
  */
-// import { priceData } from '../../scripts/common.js';
+import { priceData } from '../../scripts/common.js';
 
 function buildCell(rowIndex) {
   const cell = rowIndex ? document.createElement('td') : document.createElement('th');
@@ -11,23 +12,56 @@ function buildCell(rowIndex) {
   return cell;
 }
 
-// const dropdown = priceData?.v2Pro
-// eslint-disable-next-line max-len
-//   .map((city) => `<div class="city-option" value=${city.city_state_id.split('~')[0]}>${city.city_state_id.split('~')[0]}</div>`).join('');
+let selectedCity = 'DELHI';
 
-// // debugger;
+// let v2LitecityData = {}; let v2PluscityData = {}; let v2ProcityData = {};
 
-// console.log(dropdown);
+// eslint-disable-next-line no-shadow
+function getSelectedCityPrice(priceData, selectedCity) {
+  const v2PluscityData = priceData?.v2Plus.find((city) => city.city_state_id.split('~')[0] === selectedCity);
+  const v2ProcityData = priceData?.v2Pro.find((city) => city.city_state_id.split('~')[0] === selectedCity);
+  const v2LitecityData = priceData?.v2Lite.find((city) => city.city_state_id.split('~')[0] === selectedCity);
 
-// function makeCityDropDown(priceData, dropdown) {
-//   const cityWrapp = document.createElement('div');
-//   cityWrapp.classList.add('city-wrapper');
-//   cityWrapp.innerHTML = dropdown;
-//   return cityWrapp;
-//   console.log(cityWrapp);
+  return [v2ProcityData, v2PluscityData, v2LitecityData];
+}
+
+function listDom() {
+  const dropdown = priceData?.v2Pro
+    .map((city) => {
+      const cityName = city.city_state_id.split('~')[0];
+      const isActive = cityName === selectedCity;
+      return `<div class="city-option" ${isActive ? ' active' : ''} value="${cityName}">${cityName}</div>`;
+    })
+    .join('');
+  const cityWrapp = document.createElement('div');
+  cityWrapp.classList.add('city-wrapper');
+  cityWrapp.innerHTML = dropdown;
+  const activeCity = cityWrapp.querySelector('.city-option[active]');
+  // let activeCity = cityWrapp.
+  return { cityWrapp, activeCity, dropdown };
+}
+
+// function changeCity(priceData, activeCity) {
+//   console.log(activeCity);
+//   console.log(priceData);
 // }
 
-// let selectWrapp = document.createElement('div');
+// eslint-disable-next-line no-shadow
+function makeCityDropDown(priceData) {
+  const { cityWrapp, activeCity } = listDom();
+  const selectWrapp = document.createElement('div');
+  selectWrapp.classList.add('select-wrapper');
+  const prices = getSelectedCityPrice(priceData, selectedCity);
+  // console.log(v2LitecityData, v2PluscityData, v2ProcityData);
+  const selectCity = activeCity ? activeCity.textContent : 'Select City';
+  selectWrapp.innerHTML = `
+    <span class='selected-city'>
+    ${selectCity}
+    </span>
+      ${cityWrapp.outerHTML}
+  `;
+  return { selectWrapp, prices };
+}
 
 function getLiElements(el) {
   const ul = el.querySelector('ul');
@@ -130,5 +164,50 @@ export default function decorateTable(block) {
     }
   });
 
-  // block.appendChild(makeCityDropDown(priceData, dropdown));
+  const trLastChild = block.querySelector('table tbody tr:last-child');
+  function updateCityPrice() {
+    const { selectWrapp, prices } = makeCityDropDown(priceData);
+    trLastChild.querySelector('td').innerHTML = '';
+    trLastChild.querySelector('td').appendChild(selectWrapp);
+    // debugger;
+    trLastChild.querySelectorAll(':scope div td').forEach((td, index) => {
+      const price = prices[index].effectivePrice;
+      let priceSpan = td.querySelector('.price-value');
+      if (priceSpan) {
+        priceSpan.textContent = price;
+      } else {
+        priceSpan = document.createElement('span');
+        priceSpan.classList.add('price-value');
+        priceSpan.textContent = price;
+        td.appendChild(priceSpan);
+      }
+    });
+
+    // const selectedWrapp = block.querySelector('.select-wrapper');
+    // const selectedCityHTML = block.querySelector('.selected-city');
+    const cities = block.querySelectorAll('.city-wrapper .city-option');
+
+    cities.forEach((city) => {
+      city.addEventListener('click', (e) => {
+        selectedCity = e.target.textContent;
+        trLastChild.querySelector('td').replaceChildren(selectWrapp);
+      });
+    });
+    // selectedWrapp.addEventListener('click', () => {
+    //   if (selectedWrapp.classList.contains('open')) {
+    //     selectedWrapp.classList.remove('open');
+    //   } else {
+    //     selectedWrapp.classList.add('open');
+    //   }
+    // });
+  }
+  updateCityPrice();
+  trLastChild.querySelector('td').addEventListener('click', (e) => {
+    updateCityPrice();
+    if (e.currentTarget.classList.contains('open')) {
+      e.currentTarget.classList.remove('open');
+    } else {
+      e.currentTarget.classList.add('open');
+    }
+  });
 }
