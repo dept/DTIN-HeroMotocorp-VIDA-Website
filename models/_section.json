@@ -145,7 +145,11 @@
             {
               "name": "Registered Address",
               "value": "registered-address"
-            }
+            },
+            {
+            "name": "Sticky Tab",
+            "value": "sticky-tab"
+          }
           ]
         }
       ]
