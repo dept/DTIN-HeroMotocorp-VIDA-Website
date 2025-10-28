@@ -153,6 +153,10 @@
     cursor: pointer;
 }
 
+.swiper-pagination{
+    display: none;
+}
+
 
 
 .carousel .swiper-wrapper > .swiper-slide {
