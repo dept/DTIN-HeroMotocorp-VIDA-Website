@@ -1,3 +1,5 @@
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable no-descending-specificity */
 .section.compare {
     max-width: 1312px;
     margin: 0 auto;
@@ -50,6 +52,11 @@ tr {
     flex-direction: row-reverse;
     gap: 4px;
     justify-content: flex-end;
+}
+
+.section.compare .pricecity thead tr th p img {
+    width: 70%;
+    max-width: 74px;
 }
 
 .section.compare .pricecity tbody tr {
@@ -169,6 +176,20 @@ tr {
 
     .section.compare .pricecity thead tr th p {
         justify-content: center;
+    }
+
+    .section.pricecity-container .default-content-wrapper:nth-child(3) p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .section.compare .pricecity tbody tr p img {
+        cursor: pointer;
+    }
+
+    .section.compare .pricecity thead tr th p img {
+        width: 94px;
+        max-width: 100%;
     }
 
     .section.pricecity-container .default-content-wrapper:nth-child(3) p {

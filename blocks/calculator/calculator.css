@@ -181,6 +181,7 @@ font-size: 16px;
     font-weight: 600;
     font-family: montreal-semibold,sans-serif;
     color: #5C5A5A;
+    width: 60%;
 }
 
 .section .calculator-right > div:nth-child(1) div p:nth-child(2){
@@ -246,6 +247,7 @@ font-size: 16px;
   margin: 44px 0 0;
 
   --percent: 15%;
+
 
   cursor: pointer;
 }

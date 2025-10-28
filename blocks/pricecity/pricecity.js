@@ -119,7 +119,7 @@ export default function decorateTable(block) {
     }
   });
 
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 900) {
     block.querySelectorAll('th').forEach((th) => {
       if (th.textContent.trim() === '') {
         th.remove();

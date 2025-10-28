@@ -783,7 +783,7 @@ header nav .nav-sections .default-content-wrapper ol:last-child {
   margin-left: 60px;
 }
 
-@media (width < 768px) {
+@media (width <= 900px) {
   .header nav {
     display: block;
     max-width: -webkit-fill-available;

@@ -17,22 +17,6 @@
   }
 }
 
-.tab .tab-list button {
-  flex: 0 0 max-content;
-  margin: 0;
-  border: 1px solid #dadada;
-  border-radius: 0;
-  padding: 0.5em;
-  background-color: var(--light-color);
-  color: initial;
-  font-weight: bold;
-  line-height: unset;
-  text-align: initial;
-  text-overflow: unset;
-  overflow: unset;
-  white-space: unset;
-  transition: background-color 0.2s;
-}
 
 .tab .tab-list button p {
   margin: 0;
@@ -58,17 +42,22 @@
 
 /* Tab Component CSS */
 
-@media (width < 768px){
-    .tab-cnt-style .tab-style .tab-panel .accordion-item-label p{
-    font-family: 'PP Montreal Medium', sans-serif;
-    font-size: 16px !important;
-    font-weight: 500 !important;
-    color: #1d1b1b !important;
-    letter-spacing: .1px;
-    padding: 5px 0 !important;
+@media (width <= 900px){
+.tab-style .tab-list .tab-tab p:nth-child(1){
+    margin-bottom: 8px;
+    width: 40px;
+    height: 34px;
 }
 
-    .section.tab-cnt-style .tab-style .tab-panel > div ul li p {
+  .tab-style .tab-list .tab-tab p:nth-child(2){
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+    width: 32px;
+    height: 32px;
+}
+
+    .section.tab-cnt-style .tab-style .tab-panel > div ul li p{
     font-size: 14px;
     font-weight: 450;
     letter-spacing: .4px;
@@ -78,35 +67,31 @@
     padding: 0;
     width: 100%;
     margin: 0;
-    font-family: 'PP Montreal Medium', sans-serif;
+    font-family: montreal-medium, sans-serif;
+}
+
+    .tab-cnt-style .tab-style .tab-panel .accordion-item .accordion-item-label p{
+    font-family: montreal-medium,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1d1b1b;
+    letter-spacing: .1px;
+    padding: 5px 0;
 }
 
 
-.block.tab-style .tab-list .tab-tab p:nth-child(1){
-    margin-bottom: 8px;
+.tab-style .tab-list .tab-tab p:nth-child(1) img {
     width: 40px;
     height: 34px;
 }
 
-.block.tab-style .tab-list .tab-tab p:nth-child(1) img {
-    width: 40px;
-    height: 34px;
-}
-
-.block.tab-style .tab-list .tab-tab p:nth-child(2) img {
+.tab-style .tab-list .tab-tab p:nth-child(2) img {
     width: 16px;
     height: 16px;
 }
 
-.block.tab-style .tab-list .tab-tab p:nth-child(2){
-    display: none;
-    text-align: center;
-    margin-top: 10px;
-    width: 32px;
-    height: 32px;
-}
 
-.block.tab-style .tab-tab{
+.tab-style .tab-tab{
     all: unset;
 }
 
@@ -127,7 +112,7 @@
     position: relative;
 }
 
-.block.tab-style .tab-panel{
+.tab-style .tab-panel{
     position: fixed;
     top: 60px;
     left: 0;
@@ -139,7 +124,7 @@
     max-height: 100vh;
 }
 
-.block.tab-style .tab-panel > div{
+.tab-style .tab-panel > div{
     position: relative;
     padding:0 24px 190px;
 }
@@ -156,7 +141,7 @@
     letter-spacing: .1px;
     line-height: 24px;
     color: #5c5a5a;
-    font-family: 'PP Montreal Medium', sans-serif;;
+    font-family: montreal-medium, sans-serif;;
     padding-bottom: 10px;
 }
 
@@ -171,11 +156,11 @@
     letter-spacing: .1px;
     line-height: 24px;
     padding: 4px 0;
-    font-family: 'PP Montreal Medium', sans-serif;
+    font-family: montreal-medium, sans-serif;
 }
 
  .section.tab-cnt-style .tab-style .tab-panel .accordion-item-body li{
-    font-family: "PP Montreal Book",sans-serif;
+    font-family: montreal-regular,sans-serif;
  }
 
 .section.tab-cnt-style .tab-style .tab-panel > div > ol{
@@ -206,11 +191,6 @@
   color: #ff5310 !important;
 }
 
-.section .tab-style .accordion-item.active .accordion-item-label p::before{
-      transform: rotate(315deg);
-      top: 15px;
-}
-
 header .nav .tab-cnt-style{
     display: flex;
     align-items: center;
@@ -223,6 +203,15 @@ header .nav .tab-cnt-style{
     padding: 2px 6px;
     font-size: 12px;
     border-radius: 2px;
+}
+
+.section.tab-cnt-style .tab-style details:open .accordion-item-label p{
+  color: #ff5310;
+}
+
+.section.tab-cnt-style .tab-style details:open .accordion-item-label p::before{
+  transform: rotate(-45deg);
+  top: 10px;
 }
 
 }

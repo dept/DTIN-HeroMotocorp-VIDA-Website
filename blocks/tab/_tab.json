@@ -37,12 +37,12 @@
             "fields": [
                 {
                     "component": "multiselect",
-                    "name": "style",
+                    "name": "classes",
                     "label": "Style",
                     "options": [
                         {
                             "name": "Tab Style",
-                            "value": "tab-style" 
+                            "value": "tab-style"
                         }
                     ]
                 }
@@ -54,28 +54,28 @@
                 {
                     "component": "reference",
                     "valueType": "string",
-                    "name": "col1_image",
+                    "name": "col1_hamburger",
                     "label": "Hamburger Image",
                     "multi": false
                 },
                 {
                     "component": "text",
                     "valueType": "string",
-                    "name": "col1_imageAlt",
+                    "name": "col1_hamburgerAlt",
                     "label": "Head Image Alt",
                     "value": ""
                 },
                 {
                     "component": "reference",
                     "valueType": "string",
-                    "name": "col1_image2",
+                    "name": "col1_cross",
                     "label": "Cross Image",
                     "multi": false
                 },
                 {
                     "component": "text",
                     "valueType": "string",
-                    "name": "col1_image2Alt",
+                    "name": "col1_crossAlt",
                     "label": "Cross Image Alt",
                     "value": ""
                 },
