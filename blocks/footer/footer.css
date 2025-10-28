@@ -374,6 +374,18 @@ footer .footer>div {
     border-bottom: 1px solid #fff;
   }
 
+   .section.footer-accordion ol{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid #fff;
+   }
+
+   .section.footer-accordion ol li img{
+    width: 30px;
+    height: 30px;
+   }
+
 }
 
 /* Footer Terms Service Container CSS */
