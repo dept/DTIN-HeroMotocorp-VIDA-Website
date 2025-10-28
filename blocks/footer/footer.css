@@ -1,5 +1,5 @@
 footer {
-  background-color: #e4eaf1;
+  background-color: #1D1B1B;
 }
 
 footer .footer>div {
@@ -15,29 +15,29 @@ footer .footer>div {
 }
 
 /* Footer Address CSS */
-.section.footer-address-conatiner .columns.block>div {
+.section.footer-address-container .columns.block>div {
   align-items: start;
   padding-bottom: 32px;
 }
 
-.section.footer-address-conatiner .columns.block>div>div:first-child {
+.section.footer-address-container .columns.block>div>div:first-child {
   width: auto;
   min-width: 18.75rem;
 }
 
-.section.footer-address-conatiner .columns.block>div>div:last-child {
+.section.footer-address-container .columns.block>div>div:last-child {
   width: 80%;
   flex: unset;
 }
 
-.section.footer-address-conatiner .columns.block>div>div .icon.icon-vida-footer-logo {
+.section.footer-address-container .columns.block>div>div .icon.icon-vida-footer-logo {
   display: inline-block;
   width: 170px;
   height: 24px;
   cursor: pointer;
 }
 
-.section.footer-address-conatiner .columns.block>div>div span img {
+.section.footer-address-container .columns.block>div>div span img {
   width: 100%;
   height: 100%;
 }
@@ -49,7 +49,7 @@ footer .footer>div {
   color: #222;
 }
 
-.section.footer-address-conatiner .columns.block>div>div p {
+.section.footer-address-container .columns.block>div>div p {
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
@@ -70,7 +70,7 @@ footer .footer>div {
   color: #ff5310;
 }
 
-.section.footer-address-conatiner .columns.block>div>div p.button-container a {
+.section.footer-address-container .columns.block>div>div p.button-container a {
   margin: 0;
   padding: 0;
   background-color: unset;
@@ -94,13 +94,13 @@ footer .footer>div {
 }
 
 
-.section.footer-address-conatiner .columns.block>div>div ul {
+.section.footer-address-container .columns.block>div>div ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.section.footer-address-conatiner .columns.block>div>div ul li p {
+.section.footer-address-container .columns.block>div>div ul li p {
   color: #222;
   font-size: 14px;
   line-height: 16px;
@@ -109,42 +109,42 @@ footer .footer>div {
   font-family: "PP Montreal Book",sans-serif;
 }
 
-.section.footer-address-conatiner .columns.block>div>div ul li ul {
+.section.footer-address-container .columns.block>div>div ul li ul {
   display: flex;
 }
 
-.section.footer-address-conatiner .columns.block>div>div ul li ul li {
+.section.footer-address-container .columns.block>div>div ul li ul li {
   margin-right: 18px;
 }
 
-.section.footer-address-conatiner .columns.block>div>div ul li ul li span {
+.section.footer-address-container .columns.block>div>div ul li ul li span {
   display: inline-block;
   width: 30px;
   height: 30px;
 }
 
-.section.footer-address-conatiner .columns.block>div>div ul li ul li span img {
+.section.footer-address-container .columns.block>div>div ul li ul li span img {
   width: 100%;
   height: 100%;
   opacity: 0.3;
 }
 
-.section.footer-address-conatiner .columns.block>div>div ul li ul li span img:hover {
+.section.footer-address-container .columns.block>div>div ul li ul li span img:hover {
   opacity: unset;
 }
 
-.section.footer-address-conatiner .columns.block>div>div:last-child ul {
+.section.footer-address-container .columns.block>div>div:last-child ul {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
 }
 
 
-.section.footer-address-conatiner .columns.block>div>div:last-child ul li {
+.section.footer-address-container .columns.block>div>div:last-child ul li {
   width: 20%;
 }
 
-.section.footer-address-conatiner .columns.block>div>div:last-child ul li p {
+.section.footer-address-container .columns.block>div>div:last-child ul li p {
   color: #222;
   font-size: 18px;
   font-weight: 600;
@@ -153,18 +153,18 @@ footer .footer>div {
   font-family: "PP Montreal Bold",sans-serif;
 }
 
-.section.footer-address-conatiner .columns.block>div>div:last-child ul li ul {
+.section.footer-address-container .columns.block>div>div:last-child ul li ul {
   flex-direction: column;
   margin: 0;
 }
 
-.section.footer-address-conatiner .columns.block>div>div:last-child ul li ul li {
+.section.footer-address-container .columns.block>div>div:last-child ul li ul li {
   margin: 0;
   width: unset;
   padding-left: 0;
 }
 
-.section.footer-address-conatiner .columns.block>div>div:last-child ul li ul li a {
+.section.footer-address-container .columns.block>div>div:last-child ul li ul li a {
   color: #222;
   font-size: 14px;
   font-weight: 400;
@@ -172,7 +172,7 @@ footer .footer>div {
   font-family: "PP Montreal Book",sans-serif;
 }
 
-.section.footer-address-conatiner .columns.block>div>div:last-child ol li ol li a {
+.section.footer-address-container .columns.block>div>div:last-child ol li ol li a {
   color: #222;
   font-size: 14px;
   font-weight: 400;
@@ -180,18 +180,18 @@ footer .footer>div {
   font-family: "PP Montreal Book",sans-serif;
 }
 
-.section.footer-address-conatiner .columns.block>div>div:last-child ul li ul li a:hover {
+.section.footer-address-container .columns.block>div>div:last-child ul li ul li a:hover {
   text-decoration: none;
   color: #ff5310;
 }
 
-.section.footer-address-conatiner .columns.block>div>div:last-child ol {
+.section.footer-address-container .columns.block>div>div:last-child ol {
   list-style: none;
   margin: 32px 0 0;
   padding: 0;
 }
 
-.section.footer-address-conatiner .columns.block>div>div:last-child ol li p {
+.section.footer-address-container .columns.block>div>div:last-child ol li p {
   color: #222;
   font-size: 18px;
   font-weight: 600;
@@ -202,115 +202,118 @@ footer .footer>div {
   font-family: "PP Montreal Medium",sans-serif;
 }
 
-.section.footer-address-conatiner .columns.block>div>div:last-child ol li ol {
+.section.footer-address-container .columns.block>div>div:last-child ol li ol {
   display: flex;
   gap: 2rem;
   margin: 0;
 }
 
 
-.section.footer-address-conatiner .columns.block>div>div:last-child ol li ol li a:hover {
+.section.footer-address-container .columns.block>div>div:last-child ol li ol li a:hover {
   text-decoration: none;
   color: #ff5310;
 }
 
 @media (width <=900px) {
-  .section.footer-address-conatiner {
+  .section.footer-address-container {
     padding-top: 32px;
     order: 2;
   }
 
-    .section.footer-address-conatiner .columns.block>div {
+    .section.footer-address-container .columns.block>div {
     padding-bottom: unset;
   }
 
-  .section.footer-address-conatiner .columns.block>div>div:first-child {
+  .section.footer-address-container .columns.block>div>div:first-child {
     min-width: 100%;
   }
 
-  .section.footer-address-conatiner .columns.block>div>div:last-child {
+  .section.footer-address-container .columns.block>div>div:last-child {
     display: none;
   }
 
 
-  .section.footer-address-conatiner .columns.block>div>div ul {
+  .section.footer-address-container .columns.block>div>div ul {
     border-top: .0625rem solid #85888c;
     padding: 24px 0;
     margin-top: 20px;
   }
 
-  .section.footer-address-conatiner .columns.block>div>div ul li {
+  .section.footer-address-container .columns.block>div>div ul li {
     display: flex;
     align-items: center;
     gap: 10px;
     justify-content: space-between;
   }
 
-  .section.footer-address-conatiner .columns.block>div>div ul li ul {
+  .section.footer-address-container .columns.block>div>div ul li ul {
     border-top: unset;
     padding: 0;
     justify-content: space-between;
     margin-top: unset;
   }
 
-  .section.footer-address-conatiner .columns.block>div>div ul li p {
+  .section.footer-address-container .columns.block>div>div ul li p {
     padding: 0;
   }
 
-  .section.footer-address-conatiner .columns.block>div>div ul li ul li span {
+  .section.footer-address-container .columns.block>div>div ul li ul li span {
     width: 24px;
     height: 24px;
   }
 
-  .section.footer-address-conatiner .columns.block>div>div ul li ul li {
+  .section.footer-address-container .columns.block>div>div ul li ul li {
     margin-right: 20px;
     color: #ff5310;
   }
 }
 
 /* Footer Accordion */
-.section.footer-accordian {
+.section.footer-accordion {
   display: none;
 }
 
 @media (width <=900px) {
-  .section.footer-accordian {
+  .section.footer-accordion {
     display: block;
     order: 1;
   }
 
-  .section.footer-accordian ul {
+  .section.footer-accordion ul {
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  .section.footer-accordian ul li {
-    border-bottom: .0625rem solid #222;
+  .section.footer-accordion ul li {
+    border-bottom: .0625rem solid #fff;
     padding: 20px 0;
   }
 
-  .section.footer-accordian ul li p {
+  .section.footer-accordion ul li p {
     font-size: 16px;
     line-height: normal;
     font-weight: 600;
     margin: 0;
-    color: #222;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  .section.footer-accordian ul li p::after {
-    content: url('/images/add-icon.svg');
-    height: 17px;
-    width: 17px;
+  .section.footer-accordion ul li p::after {
+        content: '';
+        display: inline-block;
+        width: 0.5em;
+        height: 0.5em;
+        border-top: 0.1em solid currentcolor;
+        border-right: 0.1em solid currentcolor;
+        transform: rotate(135deg);
+        margin-left: 0.2em;
   }
 
-  .section.footer-accordian ul li:has(ul.show)>p::after {
-    content: url('/images/minus-icon.svg');
-    height: 17px;
-    width: 17px;
+  .section.footer-accordion ul li:has(ul.show)>p::after {
+    transform: rotate(-45deg);
   }
 
   @keyframes accordian-open {
@@ -327,34 +330,50 @@ footer .footer>div {
     }
   }
 
-  .section.footer-accordian ul li ul {
+  .section.footer-accordion ul li ul {
     display: none;
     overflow: hidden;
     animation: accordian-open 5s linear forwards;
   }
 
-  .section.footer-accordian ul li ul.show {
+  .section.footer-accordion ul li ul.show {
     display: block;
   }
 
-  .section.footer-accordian ul li ul li {
+  .section.footer-accordion ul li ul li {
     border-bottom: unset;
     padding: 0;
     font-size: 14px;
     line-height: normal;
   }
 
-  .section.footer-accordian ul li ul li a {
+  .section.footer-accordion ul li ul li a {
     font-size: 14px;
     line-height: 20px;
-    color: #222;
+    color: #fff;
     font-weight: 400;
   }
 
-  .section.footer-accordian ul li ul li a:hover {
+  .section.footer-accordion ul li ul li a:hover {
     text-decoration: none;
     color: #ff5310;
   }
+
+  .section.footer-accordion .button-container a{
+    all: unset;
+    color: #fff;
+    padding-bottom: 8px;
+  }
+
+  .section.footer-accordion .button-container:nth-child(2){
+    padding-top: 24px;
+  }
+
+   .section.footer-accordion .button-container:nth-child(4){
+    padding-bottom: 24px;
+    border-bottom: 1px solid #fff;
+  }
+
 }
 
 /* Footer Terms Service Container CSS */
@@ -393,7 +412,7 @@ footer .footer>div {
     text-align: center;
   }
 
-  .section.footer-address-conatiner .columns.block>div>div p {
+  .section.footer-address-container .columns.block>div>div p {
     max-width: 230px;
   }
 }

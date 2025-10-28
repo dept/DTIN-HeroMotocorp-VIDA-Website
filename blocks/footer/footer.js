@@ -18,7 +18,7 @@ export default async function decorate(block) {
   block.append(footer);
 
   // Footer Accordion
-  const title = document.querySelectorAll('.section.footer-accordian ul li p');
+  const title = document.querySelectorAll('.section.footer-accordion ul li p');
   title.forEach((elem) => {
     elem.addEventListener('click', () => {
       const summary = elem.nextElementSibling;
