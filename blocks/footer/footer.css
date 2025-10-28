@@ -135,7 +135,7 @@ footer .footer>div {
   line-height: 16px;
   font-weight: 500;
   text-decoration: underline;
-  font-family: "PP Montreal Medium",sans-serif;
+  font-family: montreal-medium,sans-serif;
 }
 
 .section.terms-service-container .default-content-wrapper ul {
@@ -182,7 +182,7 @@ footer .footer>div {
   line-height: 16px;
   font-weight: 400;
   padding-top: 16px;
-  font-family: "PP Montreal Book",sans-serif;
+  font-family: montreal-regular,sans-serif;
 }
 
 .section.footer-address-container .columns.block>div>div ul li ul {
@@ -262,7 +262,7 @@ footer .footer>div {
 
 .section.footer-address-container ol li ol {
   display: flex;
-  gap: 2rem;
+  gap: 1.9rem;
   margin: 0;
 }
 
@@ -385,6 +385,8 @@ footer .footer>div {
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.25px;
+    font-weight: 500;
+    font-family: montreal-medium,sans-serif;
   }
 
   .section.footer-accordion ul li {
@@ -397,6 +399,7 @@ footer .footer>div {
     line-height: 20px;
     letter-spacing: 0.25px;
     font-weight: 400;
+    font-family: montreal-regular,sans-serif;
     margin: 0;
     color: #DFDFDF;
     display: flex;

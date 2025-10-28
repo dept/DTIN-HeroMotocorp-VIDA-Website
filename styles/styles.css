@@ -400,7 +400,7 @@ display: block;
   padding: 8px 14px;
   font-size: 14px;
   font-weight: 400;
-  font-family: "PP Montreal Book", sans-serif;
+  font-family: montreal-regular, sans-serif;
   width: 98px;
   text-align: center;
 }
