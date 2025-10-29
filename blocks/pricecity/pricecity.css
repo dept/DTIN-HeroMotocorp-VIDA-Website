@@ -235,12 +235,14 @@ tr {
 
 /* Price City css Dropdown */
 
-.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody .select-wrapper {
+.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody .select-wrapper,
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .price-container {
     display: flex;
     position: relative;
 }
 
-.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td .select-wrapper .city-wrapper {
+.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td .select-wrapper .city-wrapper,
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .city-wrapper {
     display: none;
     position: absolute;
     top: 60px;
@@ -250,11 +252,12 @@ tr {
     max-height: 400px;
 }
 
-.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td.open .select-wrapper .city-wrapper {
+.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td.open .select-wrapper .city-wrapper,
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .state-city.open .city-wrapper {
     display: flex;
 }
 
-.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus table {
+/* .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus table {
     background-color: #f7f1eb;
     width: 100%;
     max-width: 1000px;
@@ -263,7 +266,8 @@ tr {
     padding: 30px 40px;
 }
 
-.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus thead th, tbody td {
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus thead th,
+tbody td {
     border: none;
     padding: 0;
     vertical-align: top;
@@ -287,7 +291,8 @@ tr {
     margin-left: 5px;
 }
 
-.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus thead th:nth-child(2), thead th:nth-child(3) {
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus thead th:nth-child(2),
+thead th:nth-child(3) {
     font-size: 18px;
     color: #666;
     font-weight: normal;
@@ -314,13 +319,137 @@ tr {
     width: 50%;
 }
 
-.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus tbody td:last-child > span.price-value:nth-child(2) {
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus tbody td:last-child>span.price-value:nth-child(2) {
     font-size: 12px;
     color: #444;
     font-weight: normal;
     display: block;
+} */
+
+.section.pricecity-container .pricecity-wrapper:has(.pricecity.block.v2-plus) {
+    background: rgb(239, 235, 227);
+    border-radius: 1pc;
+    padding: 3pc;
 }
 
-/* .city-wrapper {
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .pricecity.block {
+    background-color: #fcf6ef;
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .left-content {
+    flex-grow: 1;
+    max-width: 60%;
+    padding-right: 20px;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .right-content {
+    flex-shrink: 0;
+    text-align: right;
+    width: 30%;
+    min-width: 200px;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .main-heading {
+    font-size: 36px;
+    font-weight: 700;
+    color: #212121;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .main-heading>span {
+    margin-right: 0;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .state-city {
+    color: #d1512c;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .select-wrapper .selected-city {
+    color: #d1512c;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .state-city .select-wrapper::after {
+    content: ' \25BC';
+    font-size: 0.7em;
+    vertical-align: middle;
+    color: #d1512c;
+    margin-left: 5px;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .city-wrapper {
     display: none;
-} */
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .sub-text {
+    font-size: 18px;
+    color: #666;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .price {
+    font-size: 55px;
+    font-weight: 700;
+    color: #212121;
+    margin: 0 0 5px 0;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .price span {
+    font-weight: 700;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .disclaimer {
+    font-size: 12px;
+    color: #444;
+    line-height: 1.4;
+    font-weight: 400;
+    max-width: 250px;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .pricecity.block {
+        padding: 20px;
+    }
+
+    .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .price-container {
+        flex-direction: column;
+    }
+
+    .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .left-content,
+    .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .right-content {
+        max-width: 100%;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .right-content {
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .disclaimer {
+        margin-left: 0;
+    }
+}
