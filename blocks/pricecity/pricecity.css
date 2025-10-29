@@ -67,7 +67,7 @@ tr {
     font: var(--font-card);
 }
 
-.section.compare .pricecity tbody tr div {
+.section.compare .pricecity tbody tr>div {
     display: flex;
     justify-content: space-between;
     padding: 16px 0 24px;
@@ -76,8 +76,41 @@ tr {
     gap: 10px;
 }
 
-.section.compare .pricecity tbody tr:last-child div {
+.section.compare .pricecity tbody tr:last-child>div {
     border-bottom: none;
+}
+
+.section.compare .pricecity tbody tr:last-child>div>td p {
+    position: relative;
+}
+
+.section.compare .pricecity tbody tr:last-child div p span {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #A7A6A6;
+    box-shadow: 0 12px 14px 0 rgb(0 0 0 / 10%);
+    background-color: #FFF;
+    border-radius: 12px;
+    width: 90px;
+    position: absolute;
+    top: -275px;
+    left: -68px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    font-weight: 400;
+    font-family: montreal-regular, sans-serif;
+    display: none
+}
+
+.section.compare .pricecity tbody tr:last-child div p img:hover+span {
+    display: block;
+}
+
+.section.compare .pricecity tbody tr:last-child div td {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
 }
 
 .section.compare .pricecity tbody tr div p {
@@ -113,6 +146,134 @@ tr {
     font-weight: 600;
     text-decoration: underline;
     cursor: pointer;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody .select-wrapper {
+    display: flex;
+    position: relative;
+}
+
+body.dropdown-open {
+    overflow: hidden;
+}
+
+body.dropdown-open::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgb(0 0 0 / 50%);
+    backdrop-filter: blur(20px);
+    z-index: 102;
+    overflow-y: hidden;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td .select-wrapper .select-dropdown {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    z-index: 103;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 70%;
+    background-color: #FFF;
+    border-radius: 8px 8px 0 0;
+    padding: 58px 16px 16px;
+    box-shadow: 0 0 24px 0 rgb(0 0 0 / 8%);
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td.open .select-wrapper .select-dropdown {
+    display: flex;
+}
+
+.section.compare .city-wrapper .city-option {
+    border-bottom: 1px solid #DFDFDF;
+    padding: 8px 0;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.4px;
+    font-weight: 500;
+    font-family: montreal-medium, sans-serif;
+}
+
+.section.compare .selected-city {
+    color: rgb(255 83 16 / 100%);
+    position: relative;
+    cursor: pointer;
+}
+
+.section.compare .selected-city::before {
+    position: absolute;
+    right: -30px;
+    top: 8px;
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 12px;
+    margin-right: 6px;
+    background: rgb(255 83 16 / 100%);
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+.section.compare .open .selected-city::before {
+    top: 8px;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
+.section.compare .pricecity tbody tr p img {
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.section.compare .price-value {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.25px;
+    color: #000;
+    font-weight: 600;
+    font-family: montreal-semibold, sans-serif;
+}
+
+.section.compare .search-close {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.section.compare .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #E3E3E3;
+    border-radius: 4px;
+    padding: 10px 8px;
+    margin-bottom: 16px;
+}
+
+.section.compare .search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.section.compare .search-btn {
+    all: unset;
+    background: none;
+}
+
+.section.compare .search-btn img {
+    width: 18px;
+    height: 18px;
+}
+
+.section.compare .city-wrapper {
+    overflow-y: auto;
 }
 
 @media (width >=900px) {
@@ -183,10 +344,6 @@ tr {
         line-height: 20px;
     }
 
-    .section.compare .pricecity tbody tr p img {
-        cursor: pointer;
-    }
-
     .section.compare .pricecity thead tr th p img {
         width: 94px;
         max-width: 100%;
@@ -204,7 +361,7 @@ tr {
         border-bottom: 1px solid #DFDFDF;
     }
 
-    .section.compare .pricecity tbody tr div {
+    .section.compare .pricecity tbody tr>div {
         flex: 0 0 80%;
         padding: 0;
         border-bottom: none;
@@ -212,10 +369,6 @@ tr {
 
     .section.compare .pricecity tbody tr>td:first-child p {
         display: block;
-    }
-
-    .section.compare .pricecity tbody tr p img {
-        cursor: pointer;
     }
 
     .section.compare .pricecity .color ul {
@@ -229,6 +382,53 @@ tr {
 
     .section.compare .pricecity tbody tr:last-child {
         padding-bottom: 24px;
+        border-bottom: none;
+    }
+
+    .section.compare .pricecity tbody tr:last-child div p span {
+        width: 336px;
+        top: -95px;
+        left: unset;
+    }
+
+    .section.compare .pricecity tbody tr:last-child div p span::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        /* places arrow just below box */
+        left: 50%;
+        /* centers horizontally */
+        transform: translateX(-50%);
+        width: 20px;
+        height: 10px;
+        background: #fff;
+        border: 1px solid #dcdcdc;
+        border-top: none;
+        clip-path: polygon(0 0, 50% 100%, 100% 0);
+    }
+
+    .section.compare .price-value {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.1px;
+    }
+
+
+    .section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td .select-wrapper .select-dropdown,
+    .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .select-dropdown {
+        display: none;
+        position: absolute;
+        top: 30px;
+        bottom: unset;
+        left: unset;
+        width: 300px;
+        box-sizing: border-box;
+        z-index: 103;
+        flex-direction: column;
+        height: 400px;
+        background-color: #FFF;
+        border-radius: 8px 8px 0 0;
+        box-shadow: 0 0 24px 0 rgb(0 0 0 / 8%);
     }
 
 }
@@ -245,11 +445,17 @@ tr {
 .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .city-wrapper {
     display: none;
     position: absolute;
-    top: 60px;
-    width: 100%;
+    top: 30px;
+    bottom: unset;
+    left: unset;
+    width: 300px;
+    box-sizing: border-box;
+    z-index: 103;
     flex-direction: column;
-    overflow: hidden;
-    max-height: 400px;
+    height: 400px;
+    background-color: #FFF;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 0 24px 0 rgb(0 0 0 / 8%);
 }
 
 .section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td.open .select-wrapper .city-wrapper,
