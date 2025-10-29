@@ -485,12 +485,18 @@
     "fields": [
       {
         "component": "multiselect",
-        "name": "style",
+        "name": "classes",
         "label": "Style",
+        "valueType": "string",
         "options": [
           {
-            "name": "V2 Plus",
-            "value": "v2-plus"
+            "name": "Price City",
+            "children": [
+              {
+                "name": "V2 Plus",
+                "value": "v2-plus"
+              }
+            ]
           }
         ]
       },

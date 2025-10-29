@@ -253,3 +253,74 @@ tr {
 .section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td.open .select-wrapper .city-wrapper {
     display: flex;
 }
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus table {
+    background-color: #f7f1eb;
+    width: 100%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    padding: 30px 40px;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus thead th, tbody td {
+    border: none;
+    padding: 0;
+    vertical-align: top;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus thead th:first-child {
+    flex-basis: 50%;
+    text-align: left;
+    font-size: 40px;
+    font-weight: 600;
+    color: #212121;
+    line-height: 1.2;
+    padding-bottom: 5px;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .select-wrapper .selected-city {
+    color: #d1512c;
+    font-weight: 600;
+    display: inline-block;
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus thead th:nth-child(2), thead th:nth-child(3) {
+    font-size: 18px;
+    color: #666;
+    font-weight: normal;
+    padding-top: 10px;
+    line-height: 1.4;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus tbody td:first-child {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .price-value:nth-child(1) {
+    font-size: 55px;
+    font-weight: 600;
+    color: #212121;
+    display: block;
+    text-align: right;
+    margin: 0 0 5px 0;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus tbody td:last-child {
+    text-align: right;
+    width: 50%;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus tbody td:last-child > span.price-value:nth-child(2) {
+    font-size: 12px;
+    color: #444;
+    font-weight: normal;
+    display: block;
+}
+
+/* .city-wrapper {
+    display: none;
+} */
