@@ -43,6 +43,23 @@ function listDom() {
   return { cityWrapp, activeCity, dropdown };
 }
 
+// eslint-disable-next-line func-names
+window.filterCities = function () {
+  // eslint-disable-next-line no-restricted-globals
+  const input = event.target;
+  const filter = input.value.toLowerCase();
+
+  // Find the nearest dropdown and its city wrapper
+  const dropdown = input.closest('.select-dropdown');
+  const cityWrapper = dropdown.querySelector('.city-wrapper');
+  const cityOptions = cityWrapper.querySelectorAll('.city-option');
+
+  cityOptions.forEach((option) => {
+    const text = option.textContent.trim().toLowerCase();
+    option.style.display = text.includes(filter) ? 'block' : 'none';
+  });
+};
+
 // eslint-disable-next-line no-shadow
 function makeCityDropDown(priceData, block) {
   const { cityWrapp, activeCity } = listDom();
@@ -54,7 +71,21 @@ function makeCityDropDown(priceData, block) {
     <span class='selected-city'>
     ${selectCity}
     </span>
+    <div class="select-dropdown">
+    <img class="search-close" src="/icons/Close.png" alt="cross">
+    <div class="search-bar">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search"
+        onkeyup="filterCities()"
+      />
+      <button class="search-btn">
+        <img src="/icons/Search.svg" alt="Search" />
+      </button>
+    </div>
       ${cityWrapp.outerHTML}
+    </div>
   `;
   return { selectWrapp, prices };
 }
@@ -104,10 +135,16 @@ function setupCityDropdownAndPrice(trLastChild, block) {
         updateCityPrice(trLastChild, block);
       }
       cityTd.classList.remove('open');
+      if (window.innerWidth <= 900) {
+        document.body.classList.remove('dropdown-open');
+      }
     });
   });
   cityTd.addEventListener('click', (e) => {
-    e.currentTarget.classList.toggle('open');
+    e.currentTarget.classList.add('open');
+    if (window.innerWidth <= 900) {
+      document.body.classList.add('dropdown-open');
+    }
   });
 }
 

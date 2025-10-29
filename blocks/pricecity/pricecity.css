@@ -153,27 +153,40 @@ tr {
     position: relative;
 }
 
-.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td .select-wrapper .city-wrapper {
+body.dropdown-open {
+  overflow: hidden;
+}
+
+body.dropdown-open::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgb(0 0 0 / 50%);
+  backdrop-filter: blur(20px);
+  z-index: 102;
+  overflow-y: hidden;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td .select-wrapper .select-dropdown {
     display: none;
-    position: absolute;
-    top: 30px;
-    width: 200px;
-    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    z-index: 103;
     flex-direction: column;
     overflow-y: auto;
-    max-height: 400px;
+    height: 70%;
+    background-color: #FFF;
+    border-radius: 8px 8px 0 0;
+    padding: 58px 16px 16px;
+    box-shadow: 0 0 24px 0 rgb(0 0 0 / 8%);
 }
 
-.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td.open .select-wrapper .city-wrapper {
+.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td.open .select-wrapper .select-dropdown {
     display: flex;
 }
-
-    .section.compare .city-wrapper{
-        background-color: #FFF;
-        border-radius: 8px;
-        padding: 16px;
-         box-shadow: 0 0 24px 0 rgb(0 0 0 / 8%);
-    }
 
     .section.compare .city-wrapper .city-option{
         border-bottom: 1px solid #DFDFDF;
@@ -214,6 +227,54 @@ tr {
         cursor: pointer;
         margin-left: 8px;
     }
+
+    .section.compare .price-value{
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.25px;
+        color: #000;
+        font-weight: 600;
+        font-family: montreal-semibold,sans-serif;
+    }
+
+    .section.compare .search-close{
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        cursor: pointer;
+    }
+
+   .section.compare .search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #E3E3E3;
+  border-radius: 4px;
+  padding:10px 8px;
+  margin-bottom: 16px;
+}
+
+.section.compare .search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.section.compare .search-btn {
+    all: unset;
+  background: none;
+}
+
+.section.compare .search-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+.section.compare .city-wrapper{
+    overflow-y: auto;
+}
 
 @media (width >=900px) {
     .section.compare {
@@ -342,6 +403,29 @@ tr {
   border: 1px solid #dcdcdc;
   border-top: none;
   clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+   .section.compare .price-value{
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.1px;
+    }
+
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td .select-wrapper .select-dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    bottom: unset;
+    left: unset;
+    width: 300px;
+    box-sizing: border-box;
+    z-index: 103;
+    flex-direction: column;
+    height: 400px;
+    background-color: #FFF;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 0 24px 0 rgb(0 0 0 / 8%);
 }
 
 }
