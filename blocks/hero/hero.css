@@ -38,14 +38,6 @@
   display: none;
 }
 
-/* .section.hero-main{
-  height: 892px;
-} */
-
-.section.hero-main .block p:nth-of-type(1) picture img{
-  /* height: 892px; */
-}
-
 .section.hero-main .hero div:nth-child(2) div p:nth-child(1){
     font-size: 31.62px;
     color: #fff;

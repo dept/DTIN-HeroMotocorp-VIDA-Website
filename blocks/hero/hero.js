@@ -1,4 +1,4 @@
-export default async function decorate(block) {
+export default async function decorate() {
   function setSectionHeight(section) {
     const pictures = section.querySelectorAll('p picture img');
     if (pictures.length < 2) return;
