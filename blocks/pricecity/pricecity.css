@@ -78,6 +78,9 @@ tr {
 
 .section.compare .pricecity tbody tr:last-child > div {
     border-bottom: none;
+}
+
+.section.compare .pricecity tbody tr:last-child > div > td p{
     position: relative;
 }
 
@@ -88,24 +91,16 @@ tr {
     box-shadow: 0 12px 14px 0 rgb(0 0 0 / 10%);
     background-color: #FFF;
     border-radius: 12px;
-    width: 336px;
+    width: 90px;
     position: absolute;
-    top:-145px;
+    top:-275px;
+    left: -68px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    font-weight: 400;
+    font-family: montreal-regular,sans-serif;
     display: none
-}
-
-.section.compare .pricecity tbody tr:last-child  div  p  span::before{
-    content: "";
-  position: absolute;
-  bottom: -10px; /* places arrow just below box */
-  left: 50%; /* centers horizontally */
-  transform: translateX(-50%);
-  width: 20px;
-  height: 10px;
-  background: #fff;
-  border: 1px solid #dcdcdc;
-  border-top: none;
-  clip-path: polygon(0 0, 50% 100%, 100% 0);
 }
 
 .section.compare .pricecity tbody tr:last-child  div p img:hover + span{
@@ -215,6 +210,11 @@ tr {
         clip-path: polygon(50% 0, 0 100%, 100% 100%);
     }
 
+    .section.compare .pricecity tbody tr p img {
+        cursor: pointer;
+        margin-left: 8px;
+    }
+
 @media (width >=900px) {
     .section.compare {
         padding: 72px 0;
@@ -283,10 +283,6 @@ tr {
         line-height: 20px;
     }
 
-    .section.compare .pricecity tbody tr p img {
-        cursor: pointer;
-    }
-
     .section.compare .pricecity thead tr th p img {
         width: 94px;
         max-width: 100%;
@@ -314,10 +310,6 @@ tr {
         display: block;
     }
 
-    .section.compare .pricecity tbody tr p img {
-        cursor: pointer;
-    }
-
     .section.compare .pricecity .color ul {
         justify-content: center;
     }
@@ -331,5 +323,25 @@ tr {
         padding-bottom: 24px;
         border-bottom: none;
     }
+
+    .section.compare .pricecity tbody tr:last-child  div  p  span{
+    width: 336px;
+    top:-95px;
+    left: unset;
+}
+
+.section.compare .pricecity tbody tr:last-child  div  p  span::before{
+    content: "";
+  position: absolute;
+  bottom: -10px; /* places arrow just below box */
+  left: 50%; /* centers horizontally */
+  transform: translateX(-50%);
+  width: 20px;
+  height: 10px;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  border-top: none;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
 
 }
