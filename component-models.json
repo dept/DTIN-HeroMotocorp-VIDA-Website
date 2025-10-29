@@ -484,6 +484,17 @@
     "id": "pricecity",
     "fields": [
       {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "V2 Plus",
+            "value": "v2-plus"
+          }
+        ]
+      },
+      {
         "component": "richtext",
         "name": "col1_desc",
         "value": "",
