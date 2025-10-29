@@ -67,7 +67,7 @@ tr {
     font: var(--font-card);
 }
 
-.section.compare .pricecity tbody tr div {
+.section.compare .pricecity tbody tr > div {
     display: flex;
     justify-content: space-between;
     padding: 16px 0 24px;
@@ -76,8 +76,46 @@ tr {
     gap: 10px;
 }
 
-.section.compare .pricecity tbody tr:last-child div {
+.section.compare .pricecity tbody tr:last-child > div {
     border-bottom: none;
+    position: relative;
+}
+
+.section.compare .pricecity tbody tr:last-child  div  p  span{
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #A7A6A6;
+    box-shadow: 0 12px 14px 0 rgb(0 0 0 / 10%);
+    background-color: #FFF;
+    border-radius: 12px;
+    width: 336px;
+    position: absolute;
+    top:-145px;
+    display: none
+}
+
+.section.compare .pricecity tbody tr:last-child  div  p  span::before{
+    content: "";
+  position: absolute;
+  bottom: -10px; /* places arrow just below box */
+  left: 50%; /* centers horizontally */
+  transform: translateX(-50%);
+  width: 20px;
+  height: 10px;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  border-top: none;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+.section.compare .pricecity tbody tr:last-child  div p img:hover + span{
+    display: block;
+}
+
+.section.compare .pricecity tbody tr:last-child  div td{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
 }
 
 .section.compare .pricecity tbody tr div p {
@@ -114,6 +152,68 @@ tr {
     text-decoration: underline;
     cursor: pointer;
 }
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody .select-wrapper {
+    display: flex;
+    position: relative;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td .select-wrapper .city-wrapper {
+    display: none;
+    position: absolute;
+    top: 30px;
+    width: 200px;
+    z-index: 1;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td.open .select-wrapper .city-wrapper {
+    display: flex;
+}
+
+    .section.compare .city-wrapper{
+        background-color: #FFF;
+        border-radius: 8px;
+        padding: 16px;
+         box-shadow: 0 0 24px 0 rgb(0 0 0 / 8%);
+    }
+
+    .section.compare .city-wrapper .city-option{
+        border-bottom: 1px solid #DFDFDF;
+        padding: 8px 0;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.4px;
+        font-weight: 500;
+        font-family: montreal-medium,sans-serif;
+    }
+
+    .section.compare .selected-city{
+        color:rgb(255 83 16 / 100%);
+        position: relative;
+        cursor: pointer;
+    }
+
+    .section.compare .selected-city::before{
+        position: absolute;
+        right: -30px;
+        top: 8px;
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 12px;
+        margin-right: 6px;
+        background: rgb(255 83 16 / 100%);
+        clip-path: polygon(0 0, 50% 100%, 100% 0);
+    }
+
+    .section.compare .open .selected-city::before{
+        top: 8px;
+        clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    }
 
 @media (width >=900px) {
     .section.compare {
@@ -204,7 +304,7 @@ tr {
         border-bottom: 1px solid #DFDFDF;
     }
 
-    .section.compare .pricecity tbody tr div {
+    .section.compare .pricecity tbody tr > div {
         flex: 0 0 80%;
         padding: 0;
         border-bottom: none;
@@ -229,27 +329,7 @@ tr {
 
     .section.compare .pricecity tbody tr:last-child {
         padding-bottom: 24px;
+        border-bottom: none;
     }
 
-}
-
-/* Price City css Dropdown */
-
-.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody .select-wrapper {
-    display: flex;
-    position: relative;
-}
-
-.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td .select-wrapper .city-wrapper {
-    display: none;
-    position: absolute;
-    top: 60px;
-    width: 100%;
-    flex-direction: column;
-    overflow: hidden;
-    max-height: 400px;
-}
-
-.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td.open .select-wrapper .city-wrapper {
-    display: flex;
 }
