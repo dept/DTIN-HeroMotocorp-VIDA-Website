@@ -12,16 +12,19 @@ function buildCell(rowIndex) {
   return cell;
 }
 
+function getLiElements(el) {
+  const ul = el.querySelector('ul');
+  return ul?.children;
+}
+
 let selectedCity = 'DELHI';
 
-// let v2LitecityData = {}; let v2PluscityData = {}; let v2ProcityData = {};
-
 // eslint-disable-next-line no-shadow
-function getSelectedCityPrice(priceData, selectedCity) {
+function getSelectedCityPrice(priceData, selectedCity, block) {
   const v2PluscityData = priceData?.v2Plus.find((city) => city.city_state_id.split('~')[0] === selectedCity);
   const v2ProcityData = priceData?.v2Pro.find((city) => city.city_state_id.split('~')[0] === selectedCity);
   const v2LitecityData = priceData?.v2Lite.find((city) => city.city_state_id.split('~')[0] === selectedCity);
-
+  if (block.classList.contains('isV2Plus')) return [v2PluscityData];
   return [v2ProcityData, v2PluscityData, v2LitecityData];
 }
 
@@ -37,22 +40,15 @@ function listDom() {
   cityWrapp.classList.add('city-wrapper');
   cityWrapp.innerHTML = dropdown;
   const activeCity = cityWrapp.querySelector('.city-option[active]');
-  // let activeCity = cityWrapp.
   return { cityWrapp, activeCity, dropdown };
 }
 
-// function changeCity(priceData, activeCity) {
-//   console.log(activeCity);
-//   console.log(priceData);
-// }
-
 // eslint-disable-next-line no-shadow
-function makeCityDropDown(priceData) {
+function makeCityDropDown(priceData, block) {
   const { cityWrapp, activeCity } = listDom();
   const selectWrapp = document.createElement('div');
   selectWrapp.classList.add('select-wrapper');
-  const prices = getSelectedCityPrice(priceData, selectedCity);
-  // console.log(v2LitecityData, v2PluscityData, v2ProcityData);
+  const prices = getSelectedCityPrice(priceData, selectedCity, block);
   const selectCity = activeCity ? activeCity.textContent : 'Select City';
   selectWrapp.innerHTML = `
     <span class='selected-city'>
@@ -63,10 +59,58 @@ function makeCityDropDown(priceData) {
   return { selectWrapp, prices };
 }
 
-function getLiElements(el) {
-  const ul = el.querySelector('ul');
-  return ul?.children;
+function updateCityPrice(trLastChild, block) {
+  const prices = getSelectedCityPrice(priceData, selectedCity, block);
+
+  const selectedCitySpan = trLastChild.querySelector('.selected-city');
+  if (selectedCitySpan) {
+    selectedCitySpan.textContent = selectedCity;
+  }
+  trLastChild.querySelectorAll(':scope div td').forEach((td, index) => {
+    const price = prices[index]?.effectivePrice;
+    if (price) {
+      let priceSpan = td.querySelector('.price-value');
+      if (!priceSpan) {
+        priceSpan = document.createElement('span');
+        priceSpan.classList.add('price-value');
+        td.appendChild(priceSpan);
+      }
+      priceSpan.textContent = price;
+    }
+  });
+
+  trLastChild.querySelectorAll('.city-wrapper .city-option').forEach((cityOption) => {
+    if (cityOption.textContent === selectedCity) {
+      cityOption.classList.add('active');
+    } else {
+      cityOption.classList.remove('active');
+    }
+  });
 }
+
+function setupCityDropdownAndPrice(trLastChild, block) {
+  const { selectWrapp } = makeCityDropDown(priceData, block);
+  const cityTd = trLastChild.querySelector('td');
+  cityTd.innerHTML = '';
+  cityTd.appendChild(selectWrapp);
+  updateCityPrice(trLastChild, block);
+  const cities = block.querySelectorAll('.city-wrapper .city-option');
+  cities.forEach((city) => {
+    city.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const newCity = e.target.textContent;
+      if (newCity !== selectedCity) {
+        selectedCity = newCity;
+        updateCityPrice(trLastChild, block);
+      }
+      cityTd.classList.remove('open');
+    });
+  });
+  cityTd.addEventListener('click', (e) => {
+    e.currentTarget.classList.toggle('open');
+  });
+}
+
 export default function decorateTable(block) {
   const table = document.createElement('table');
   const div = document.createElement('div');
@@ -77,6 +121,7 @@ export default function decorateTable(block) {
   if (header) table.append(thead);
   table.append(tbody);
 
+  // --- Original Table Construction Logic ---
   [...getLiElements(block)].forEach((child, i) => {
     const row = document.createElement('tr');
     if (i) tbody.append(row); else thead.append(row);
@@ -165,49 +210,8 @@ export default function decorateTable(block) {
   });
 
   const trLastChild = block.querySelector('table tbody tr:last-child');
-  function updateCityPrice() {
-    const { selectWrapp, prices } = makeCityDropDown(priceData);
-    trLastChild.querySelector('td').innerHTML = '';
-    trLastChild.querySelector('td').appendChild(selectWrapp);
-    // debugger;
-    trLastChild.querySelectorAll(':scope div td').forEach((td, index) => {
-      const price = prices[index].effectivePrice;
-      let priceSpan = td.querySelector('.price-value');
-      if (priceSpan) {
-        priceSpan.textContent = price;
-      } else {
-        priceSpan = document.createElement('span');
-        priceSpan.classList.add('price-value');
-        priceSpan.textContent = price;
-        td.appendChild(priceSpan);
-      }
-    });
 
-    // const selectedWrapp = block.querySelector('.select-wrapper');
-    // const selectedCityHTML = block.querySelector('.selected-city');
-    const cities = block.querySelectorAll('.city-wrapper .city-option');
-
-    cities.forEach((city) => {
-      city.addEventListener('click', (e) => {
-        selectedCity = e.target.textContent;
-        trLastChild.querySelector('td').replaceChildren(selectWrapp);
-      });
-    });
-    // selectedWrapp.addEventListener('click', () => {
-    //   if (selectedWrapp.classList.contains('open')) {
-    //     selectedWrapp.classList.remove('open');
-    //   } else {
-    //     selectedWrapp.classList.add('open');
-    //   }
-    // });
+  if (trLastChild) {
+    setupCityDropdownAndPrice(trLastChild, block);
   }
-  updateCityPrice();
-  trLastChild.querySelector('td').addEventListener('click', (e) => {
-    updateCityPrice();
-    if (e.currentTarget.classList.contains('open')) {
-      e.currentTarget.classList.remove('open');
-    } else {
-      e.currentTarget.classList.add('open');
-    }
-  });
 }
