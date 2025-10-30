@@ -143,5 +143,4 @@ export default function decorateTable(block) {
   if (trLastChild && priceDomUpdate.length > 0) {
     setupCityDropdownAndPrice(trLastChild, priceDomUpdate, block, priceData);
   }
-
 }

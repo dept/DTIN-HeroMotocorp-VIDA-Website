@@ -111,7 +111,7 @@ function createCityDropdown(priceData) {
 
   const closeBtn = wrapper.querySelector('.search-close');
   const input = wrapper.querySelector('.search-input');
-  const optionsContainer = wrapper.querySelector('.city-wrapper');
+  // const optionsContainer = wrapper.querySelector('.city-wrapper');
   const options = wrapper.querySelectorAll('.city-option');
 
   // 🔹 Close button logic
@@ -168,10 +168,9 @@ function updatePrices(priceElements, block, priceData, customUpdater) {
 
 function setupCityDropdownAndPrice(targetRow, priceElements, block, priceData, customUpdater) {
   const dropdown = createCityDropdown(priceData);
-  const cityContainer =
-    targetRow.querySelector('.state-city') ||
-    targetRow.querySelector('td') ||
-    targetRow;
+  const cityContainer = targetRow.querySelector('.state-city')
+    || targetRow.querySelector('td')
+    || targetRow;
 
   cityContainer.innerHTML = '';
   cityContainer.appendChild(dropdown);
