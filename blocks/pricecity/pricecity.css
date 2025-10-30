@@ -167,8 +167,8 @@ body.dropdown-open::before {
     overflow-y: hidden;
 }
 
-.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td.open .select-wrapper .select-dropdown,
-.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .state-city.open .select-dropdown {
+.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td .select-wrapper.open .select-dropdown,
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .state-city .select-wrapper.open .select-dropdown {
     display: flex;
     padding: 44px 16px 16px;
     max-height: 400px;
@@ -436,7 +436,7 @@ body.dropdown-open::before {
 /* Price City css Dropdown */
 
 .section.pricecity-container .pricecity-wrapper .pricecity.block table tbody .select-wrapper,
-.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .price-container {
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .select-wrapper {
     display: flex;
     position: relative;
 }
@@ -462,8 +462,8 @@ body.dropdown-open::before {
     box-shadow: 0 0 24px 0 rgb(0 0 0 / 8%); */
 }
 
-.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td.open .select-wrapper .city-wrapper,
-.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .state-city.open .city-wrapper {
+.section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td .select-wrapper.open .city-wrapper,
+.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .state-city .select-wrapper.open .city-wrapper {
     display: flex;
     overflow: hidden;
     overflow-Y: scroll;
@@ -545,7 +545,7 @@ thead th:nth-child(3) {
     background: rgb(239 235 227);
     border-radius: 1pc;
     padding: 3pc;
-    margin: 20px auto ;
+    margin: 20px auto;
 }
 
 .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .pricecity.block {
@@ -615,7 +615,7 @@ thead th:nth-child(3) {
 }
 
 .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .city-wrapper {
-    display: none;
+    /* display: none; */
 }
 
 .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .sub-text {
@@ -645,7 +645,7 @@ thead th:nth-child(3) {
     margin-left: auto;
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
     .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .pricecity.block {
         padding: 20px;
     }
@@ -690,8 +690,8 @@ thead th:nth-child(3) {
         box-shadow: 0 0 24px 0 rgb(0 0 0 / 8%);
     }
 
-    .section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td.open .select-wrapper .select-dropdown,
-    .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .state-city.open .select-dropdown {
+    .section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td .select-wrapper.open .select-dropdown,
+    .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .state-city .select-wrapper.open .select-dropdown {
         height: 400px;
     }
 }
