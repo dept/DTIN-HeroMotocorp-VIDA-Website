@@ -135,6 +135,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 50px;
+  margin: 24px 0 40px;
 }
 
 .section.locate-charger .columns > div > div:nth-child(1) p:nth-child(2) a{
@@ -279,7 +280,7 @@
 }
 
 .section.locate-charger .columns > div > div:nth-child(1) p:nth-child(2){
-  margin-top: 40px;
+  margin: 40px 0 0;
 }
 
 .section.locate-charger .columns > div > div:nth-child(1) > ul{
