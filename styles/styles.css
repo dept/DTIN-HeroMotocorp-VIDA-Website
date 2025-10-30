@@ -164,9 +164,6 @@ pre {
   white-space: pre;
 }
 
-/* main > div {
-  margin: 40px 16px;
-} */
 
 input,
 textarea,
@@ -277,9 +274,6 @@ table {
 
 /* sections */
 
-/* main > .section {
-  margin: 40px 0;
-} */
 
 main > .section > div {
   max-width: 1312px;
@@ -409,7 +403,7 @@ display: block;
   opacity: 1;
   transform: none;
   transition: none;
-}
+  }
 
 @media (width >= 900px) {
   main > .section > div {
