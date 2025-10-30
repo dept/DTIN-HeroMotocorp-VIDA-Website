@@ -391,8 +391,10 @@ body.dropdown-open::before {
         content: "";
         position: absolute;
         bottom: -10px;
+
         /* places arrow just below box */
         left: 50%;
+
         /* centers horizontally */
         transform: translateX(-50%);
         width: 20px;
@@ -442,6 +444,7 @@ body.dropdown-open::before {
 .section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td .select-wrapper .city-wrapper,
 .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .city-wrapper {
     display: none;
+
     /* position: absolute; */
     top: 67px;
 
@@ -453,6 +456,7 @@ body.dropdown-open::before {
     z-index: 103;
     flex-direction: column;
     height: 400px;
+
     /* background-color: #FFF;
     border-radius: 8px 8px 0 0;
     box-shadow: 0 0 24px 0 rgb(0 0 0 / 8%); */
@@ -538,9 +542,10 @@ thead th:nth-child(3) {
 } */
 
 .section.pricecity-container .pricecity-wrapper:has(.pricecity.block.v2-plus) {
-    background: rgb(239, 235, 227);
+    background: rgb(239 235 227);
     border-radius: 1pc;
     padding: 3pc;
+    margin: 20px auto ;
 }
 
 .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .pricecity.block {
@@ -549,8 +554,8 @@ thead th:nth-child(3) {
     padding: 40px;
     max-width: 1200px;
     margin: 20px auto;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    font-family: 'Inter', Arial, sans-serif;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 5%);
+    font-family: Inter, Arial, sans-serif;
 }
 
 .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .price-container {
@@ -624,7 +629,7 @@ thead th:nth-child(3) {
     font-size: 55px;
     font-weight: 700;
     color: #212121;
-    margin: 0 0 5px 0;
+    margin: 0 0 5px;
 }
 
 .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .price span {
@@ -640,7 +645,7 @@ thead th:nth-child(3) {
     margin-left: auto;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .pricecity.block {
         padding: 20px;
     }
