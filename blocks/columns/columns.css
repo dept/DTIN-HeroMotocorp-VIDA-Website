@@ -123,16 +123,25 @@
   text-align: center;
 }
 
-.section.locate-charger .columns > div > div:nth-child(1) p:nth-child(2) a{
+.section.locate-charger .columns > div > div:nth-child(1) p:nth-child(2){
   font-size:20px;
   width: 306px;
   height: 48px;
   line-height:24px;
-  color: #fff;
   background-color: black;
   font-family: montreal-semibold,sans-serif;
   font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  margin: 24px 0 40px;
 }
+
+.section.locate-charger .columns > div > div:nth-child(1) p:nth-child(2) a{
+  color: #fff;
+}
+
 
 .section.locate-charger .columns > div > div:nth-child(1) > ul{
   display: flex;
@@ -267,10 +276,11 @@
 .section.locate-charger .columns > div > div:nth-child(1) p:nth-child(1){
     font: var(--font-600);
   color: #1D1B1B;
+  text-align: left;
 }
 
 .section.locate-charger .columns > div > div:nth-child(1) p:nth-child(2){
-  margin-top: 40px;
+  margin: 40px 0 0;
 }
 
 .section.locate-charger .columns > div > div:nth-child(1) > ul{

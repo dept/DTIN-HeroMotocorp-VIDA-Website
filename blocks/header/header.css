@@ -411,7 +411,7 @@ header nav .nav-sections .default-content-wrapper ul li p {
   border-top: 1px solid lightgray;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: max-height 0.8s ease;
   padding: 0;
 }
 
@@ -656,7 +656,7 @@ header nav .nav-sections .default-content-wrapper ol:last-child {
   border-top: 1px solid lightgray;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: max-height 0.8s ease;
   padding: 0;
 }
 
@@ -684,18 +684,7 @@ header nav .nav-sections .default-content-wrapper ol:last-child {
 }
 
 .section.buy-style .default-content-wrapper p:nth-child(1) {
-  font-size: 1pc;
-  font-weight: 500;
-  letter-spacing: .25px;
-  color: #3f3d3d;
-  text-decoration: none;
-  margin: 0;
-  cursor: pointer;
-  font-family: montreal-medium,sans-serif;
-}
-
-.section.buy-style .default-content-wrapper p:nth-child(2) {
-  background-color: #1d1b1b;
+ background-color: #1d1b1b;
   color: #fff;
   font-size: 14px;
   font-weight: 500;
@@ -710,12 +699,6 @@ header nav .nav-sections .default-content-wrapper ol:last-child {
 }
 
 .section.buy-style .default-content-wrapper p:nth-child(1):hover {
-  color: #ff5310;
-}
-
-
-
-.section.buy-style .default-content-wrapper p:nth-child(2):hover {
   background-color: #696767;
 }
 
