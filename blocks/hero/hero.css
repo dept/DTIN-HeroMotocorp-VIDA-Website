@@ -103,9 +103,6 @@ main .section.hero-component{
    font-weight: 400;
 }
 
-.section.hero-main{
-  min-height: 540px;
-}
 
 @media (width >= 900px) {
  .section .hero {
@@ -124,10 +121,6 @@ main .section.hero-component{
 
 .section.hero-main .hero-wrapper{
   height: 100%;
-}
-
-.section.hero-main{
-  min-height: 890px;
 }
 
 .section.hero-main .hero{
