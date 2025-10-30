@@ -614,10 +614,6 @@ thead th:nth-child(3) {
     margin-left: 5px;
 }
 
-.section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .city-wrapper {
-    /* display: none; */
-}
-
 .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .sub-text {
     font-size: 18px;
     color: #666;

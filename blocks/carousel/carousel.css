@@ -131,7 +131,7 @@
 
 .carousel .swiper-wrapper {
     display: flex;
-    align-items: center;
+    align-items: stretch;
 }
 
 .section.accessories .swiper-slide{
