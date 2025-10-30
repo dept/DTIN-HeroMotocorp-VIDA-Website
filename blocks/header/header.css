@@ -374,17 +374,6 @@ header nav .nav-sections .default-content-wrapper ul li p {
 
 /* sections */
 
-/* header nav .nav-sections {
-  grid-area: sections;
-  display: block;
-  visibility: visible;
-  position: fixed;
-  right: 5.5rem;
-  background: #fff;
-  top: 4rem;
-  width: 70%;
-  height: calc(100vh - 6pc);
-} */
 
 .navsection-wrapper {
   background: rgb(0 0 0 / 60%);
@@ -577,18 +566,6 @@ header nav .nav-sections .default-content-wrapper ol:last-child {
     top: 12px;
     right: 15px;
   }
-}
-
-/* tools */
-
-/* header nav .nav-tools {
-  grid-area: tools;
-} */
-
-@media (width <=900px) {
-  /* header nav .nav-tools {
-    display: none;
-  } */
 }
 
 /* New Header CSS */
