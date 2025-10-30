@@ -61,18 +61,22 @@
 }
 
 .section.dealership .button-container{
-    text-align: center;
-    padding-top: 52px;
-}
-
-.section.dealership .button-container a{
+    margin-top: 52px;
     background-color: black;
-    color: #fff;
     font-size: 20px;
     line-height: 24px;
     font-family: montreal-semibold,sans-serif;
     font-weight: 600;
     letter-spacing: -0.25px;
+    border-radius: 50px;
+    padding: 12px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.section.dealership .button-container a{
+     color: #fff;
 }
 
 @media (width >= 900px){
@@ -138,6 +142,7 @@
 .section.dealership .button-container{
     text-align: left;
     margin-top: auto;
+    width: 233px;
 }
 }
 

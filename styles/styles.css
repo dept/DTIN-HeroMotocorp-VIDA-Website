@@ -95,9 +95,9 @@ body.appear {
   display: block;
 }
 
-header {
+/* header {
   height: var(--nav-height);
-}
+} */
 
 header .header,
 footer .footer {
@@ -164,70 +164,15 @@ pre {
   white-space: pre;
 }
 
+a:any-link {
+  text-decoration: none;
+}
 
 input,
 textarea,
 select,
 button {
   font: inherit;
-}
-
-/* links */
-a:any-link {
-  color: var(--link-color);
-  text-decoration: none;
-
-  /* word-break: break-word; */
-}
-
-a:hover {
-  color: var(--link-hover-color);
-  text-decoration: underline;
-}
-
-/* buttons */
-a.button:any-link,
-button {
-  box-sizing: border-box;
-  display: inline-block;
-  max-width: 100%;
-  margin: 12px 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
-  font-family: var(--body-font-family);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.25;
-  text-align: center;
-  text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
-  cursor: pointer;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-a.button:hover,
-a.button:focus,
-button:hover,
-button:focus {
-  background-color: var(--link-hover-color);
-  cursor: pointer;
-}
-
-button:disabled,
-button:disabled:hover {
-  background-color: var(--light-color);
-  cursor: unset;
-}
-
-a.button.secondary,
-button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color);
 }
 
 main img {
@@ -391,11 +336,13 @@ display: block;
   background-color: #1d1b1b;
   color: #fff;
   border-radius: 50px;
-  padding: 8px 14px;
-  font-size: 14px;
+  padding: 16px 14px;
+  font-size: 16px;
   font-weight: 400;
   font-family: montreal-regular, sans-serif;
-  width: 98px;
+  width: 126px;
+  height: 50px;
+  box-sizing: border-box;
   text-align: center;
 }
 
