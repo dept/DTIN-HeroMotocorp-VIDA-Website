@@ -96,6 +96,7 @@
 
 .section.teaser-card .teaser > div > div:nth-child(1) p:nth-child(1) img{
     border-radius: 12.8px;
+    width: 100%;
 }
 
 

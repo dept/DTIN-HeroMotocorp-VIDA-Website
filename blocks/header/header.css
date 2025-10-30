@@ -1,4 +1,8 @@
 /* header and nav layout */
+header{
+  height: var(--nav-height);
+}
+
 header .nav-wrapper {
   backdrop-filter: blur(25px);
   background-color: #fff;
@@ -17,13 +21,13 @@ header nav {
     'brand tools hamburger' var(--nav-height); */
 
   max-width: 1400px;
-
-  /* height: var(--nav-height); */
+  height: var(--nav-height);
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  box-sizing: border-box;
 
   /* font-family: var(--body-font-family); */
 }
@@ -393,10 +397,6 @@ header nav .nav-sections .default-content-wrapper ul li p {
   justify-content: center;
 }
 
-.head-accordion .accordion-item.active .accordion-item-body {
-  max-height: 500px !important;
-}
-
 .section.head-accordion .accordion-container:nth-child(2) .accordion-item-body {
   display: flex;
   justify-content: center;
@@ -413,6 +413,25 @@ header nav .nav-sections .default-content-wrapper ul li p {
   overflow: hidden;
   transition: max-height 0.8s ease;
   padding: 0;
+}
+
+.section.head-accordion .accordion-container:nth-child(1) .accordion-item-body {
+  background-color: #f9f5ee;
+  border-radius: 0 0 20px 20px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+  border-top: 1px solid lightgray;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease;
+  padding: 0;
+}
+
+.section.head-accordion .accordion-container:nth-child(1) .accordion-item.active .accordion-item-body , .section.head-accordion .accordion-container:nth-child(2) .accordion-item.active .accordion-item-body {
+  max-height: 500px;
 }
 
 header nav .nav-sections .default-content-wrapper {
@@ -643,21 +662,6 @@ header nav .nav-sections .default-content-wrapper ol:last-child {
   font-weight: 300;
   margin-top: 4px;
   font-family: montreal-regular,sans-serif;
-}
-
-.section.head-accordion .accordion-container:nth-child(1) .accordion-item-body {
-  background-color: #f9f5ee;
-  border-radius: 0 0 20px 20px;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
-  border-top: 1px solid lightgray;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.8s ease;
-  padding: 0;
 }
 
 
