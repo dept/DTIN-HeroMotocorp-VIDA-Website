@@ -4,7 +4,7 @@
  * Recreate a table
  * https://www.hlx.live/developer/block-collection/table
  */
-import { priceData } from '../../scripts/common.js';
+import { priceData, setupCityDropdownAndPrice } from '../../scripts/common.js';
 
 function buildCell(rowIndex) {
   const cell = rowIndex ? document.createElement('td') : document.createElement('th');
@@ -15,160 +15,6 @@ function buildCell(rowIndex) {
 function getLiElements(el) {
   const ul = el.querySelector('ul');
   return ul?.children;
-}
-
-let selectedCity = 'DELHI';
-
-// eslint-disable-next-line no-shadow
-function getSelectedCityPrice(priceData, selectedCity, block) {
-  const v2PluscityData = priceData?.v2Plus.find((city) => city.city_state_id.split('~')[0] === selectedCity);
-  const v2ProcityData = priceData?.v2Pro.find((city) => city.city_state_id.split('~')[0] === selectedCity);
-  const v2LitecityData = priceData?.v2Lite.find((city) => city.city_state_id.split('~')[0] === selectedCity);
-  if (block.classList.contains('v2-plus')) return [v2PluscityData];
-  return [v2ProcityData, v2PluscityData, v2LitecityData];
-}
-
-function listDom() {
-  const dropdown = priceData?.v2Pro
-    .map((city) => {
-      const cityName = city.city_state_id.split('~')[0];
-      const isActive = cityName === selectedCity;
-      return `<div class="city-option" ${isActive ? ' active' : ''} value="${cityName}">${cityName}</div>`;
-    })
-    .join('');
-  const cityWrapp = document.createElement('div');
-  cityWrapp.classList.add('city-wrapper');
-  cityWrapp.innerHTML = dropdown;
-  const activeCity = cityWrapp.querySelector('.city-option[active]');
-  return { cityWrapp, activeCity, dropdown };
-}
-
-// eslint-disable-next-line func-names
-window.filterCities = function () {
-  // eslint-disable-next-line no-restricted-globals
-  const input = event.target;
-  const filter = input.value.toLowerCase();
-
-  // Find the nearest dropdown and its city wrapper
-  const dropdown = input.closest('.select-dropdown');
-  const cityWrapper = dropdown.querySelector('.city-wrapper');
-  const cityOptions = cityWrapper.querySelectorAll('.city-option');
-
-  cityOptions.forEach((option) => {
-    const text = option.textContent.trim().toLowerCase();
-    option.style.display = text.includes(filter) ? 'block' : 'none';
-  });
-};
-
-function closeDropdown(e, isV2Plus) {
-  e.stopPropagation();
-
-  if (isV2Plus) {
-    const cityContainer = document.querySelector(".state-city");
-    cityContainer.classList.remove("open");
-  } else {
-    const cityContainer = document.querySelector("table tr:last-child td");
-    cityContainer.classList.remove("open");
-  }
-}
-
-// eslint-disable-next-line no-shadow
-function makeCityDropDown(priceData, block, isV2Plus) {
-  const { cityWrapp, activeCity } = listDom();
-  const selectWrapp = document.createElement('div');
-  selectWrapp.classList.add('select-wrapper');
-  const prices = getSelectedCityPrice(priceData, selectedCity, block);
-  const selectCity = activeCity ? activeCity.textContent : 'Select City';
-  selectWrapp.innerHTML = `
-    <span class='selected-city'>
-    ${selectCity}
-    </span>
-    <div class="select-dropdown">
-    <img class="search-close" src="/icons/Close.png" alt="cross">
-    <div class="search-bar">
-      <input
-        type="text"
-        id="searchInput"
-        placeholder="Search"
-        onkeyup="filterCities()"
-      />
-      <button class="search-btn">
-        <img src="/icons/Search.svg" alt="Search" />
-      </button>
-    </div>
-      ${cityWrapp.outerHTML}
-    </div>
-  `;
-
-  const closeBtn = selectWrapp.querySelector('.search-close');
-  closeBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    closeDropdown(e, isV2Plus);
-  });
-  return { selectWrapp, prices };
-}
-
-function updateCityPrice(trLastChild, block, isV2Plus) {
-  const prices = getSelectedCityPrice(priceData, selectedCity, block);
-
-  const selectedCitySpan = trLastChild.querySelector('.selected-city');
-  if (selectedCitySpan) {
-    selectedCitySpan.textContent = selectedCity;
-  }
-  if (isV2Plus) {
-    const price = trLastChild.querySelector('.price span');
-    price.innerHTML = prices[0].effectivePrice;
-  } else {
-    trLastChild.querySelectorAll(':scope div td').forEach((td, index) => {
-      const price = prices[index]?.effectivePrice;
-      if (price) {
-        let priceSpan = td.querySelector('.price-value');
-        if (!priceSpan) {
-          priceSpan = document.createElement('span');
-          priceSpan.classList.add('price-value');
-          td.appendChild(priceSpan);
-        }
-        priceSpan.textContent = price;
-      }
-    });
-  }
-
-  trLastChild.querySelectorAll('.city-wrapper .city-option').forEach((cityOption) => {
-    if (cityOption.textContent === selectedCity) {
-      cityOption.classList.add('active');
-    } else {
-      cityOption.classList.remove('active');
-    }
-  });
-}
-
-function setupCityDropdownAndPrice(trLastChild, block, isV2Plus) {
-  const { selectWrapp } = makeCityDropDown(priceData, block, isV2Plus);
-  const cityTd = isV2Plus ? trLastChild.querySelector('.main-heading .state-city') : trLastChild.querySelector('td');
-  cityTd.innerHTML = '';
-  cityTd.appendChild(selectWrapp);
-  updateCityPrice(trLastChild, block, isV2Plus);
-  const cities = block.querySelectorAll('.city-wrapper .city-option');
-  cities.forEach((city) => {
-    city.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const newCity = e.target.textContent;
-      if (newCity !== selectedCity) {
-        selectedCity = newCity;
-        updateCityPrice(trLastChild, block, isV2Plus);
-      }
-      cityTd.classList.remove('open');
-      if (window.innerWidth <= 900) {
-        document.body.classList.remove('dropdown-open');
-      }
-    });
-  });
-  cityTd.addEventListener('click', (e) => {
-    e.currentTarget.classList.add('open');
-    if (window.innerWidth <= 900) {
-      document.body.classList.add('dropdown-open');
-    }
-  });
 }
 
 export default function decorateTable(block) {
@@ -286,12 +132,16 @@ export default function decorateTable(block) {
   }
 
   const trLastChild = block.querySelector('table tbody tr:last-child');
-  const isV2Plus = block.classList.contains('v2-plus');
-  if (isV2Plus) {
-    const priceDetail = block.querySelector(".price-container");
-    setupCityDropdownAndPrice(priceDetail, block, isV2Plus);
+  const priceDomUpdate = trLastChild?.querySelectorAll(':scope div td');
+
+  if (block.classList.contains('v2-plus')) {
+    const priceDetail = block.querySelector('.price-container');
+    const priceSpan = priceDetail.querySelectorAll('.price span');
+    setupCityDropdownAndPrice(priceDetail, priceSpan, block, priceData);
   }
-  if (trLastChild) {
-    setupCityDropdownAndPrice(trLastChild, block);
+
+  if (trLastChild && priceDomUpdate.length > 0) {
+    setupCityDropdownAndPrice(trLastChild, priceDomUpdate, block, priceData);
   }
+
 }
