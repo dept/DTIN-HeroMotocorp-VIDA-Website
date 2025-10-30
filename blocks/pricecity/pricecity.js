@@ -60,8 +60,20 @@ window.filterCities = function () {
   });
 };
 
+function closeDropdown(e, isV2Plus) {
+  e.stopPropagation();
+
+  if (isV2Plus) {
+    const cityContainer = document.querySelector(".state-city");
+    cityContainer.classList.remove("open");
+  } else {
+    const cityContainer = document.querySelector("table tr:last-child td");
+    cityContainer.classList.remove("open");
+  }
+}
+
 // eslint-disable-next-line no-shadow
-function makeCityDropDown(priceData, block) {
+function makeCityDropDown(priceData, block, isV2Plus) {
   const { cityWrapp, activeCity } = listDom();
   const selectWrapp = document.createElement('div');
   selectWrapp.classList.add('select-wrapper');
@@ -87,6 +99,12 @@ function makeCityDropDown(priceData, block) {
       ${cityWrapp.outerHTML}
     </div>
   `;
+
+  const closeBtn = selectWrapp.querySelector('.search-close');
+  closeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeDropdown(e, isV2Plus);
+  });
   return { selectWrapp, prices };
 }
 
@@ -125,7 +143,7 @@ function updateCityPrice(trLastChild, block, isV2Plus) {
 }
 
 function setupCityDropdownAndPrice(trLastChild, block, isV2Plus) {
-  const { selectWrapp } = makeCityDropDown(priceData, block);
+  const { selectWrapp } = makeCityDropDown(priceData, block, isV2Plus);
   const cityTd = isV2Plus ? trLastChild.querySelector('.main-heading .state-city') : trLastChild.querySelector('td');
   cityTd.innerHTML = '';
   cityTd.appendChild(selectWrapp);
@@ -271,7 +289,6 @@ export default function decorateTable(block) {
   const isV2Plus = block.classList.contains('v2-plus');
   if (isV2Plus) {
     const priceDetail = block.querySelector(".price-container");
-    debugger;
     setupCityDropdownAndPrice(priceDetail, block, isV2Plus);
   }
   if (trLastChild) {
