@@ -25,24 +25,26 @@
   inset: 0;
   width: 100%;
   box-sizing: border-box;
+  object-fit: cover;
 }
 
 .section .hero img {
   width: 100vw;
   height: auto;
+  object-fit: cover;
 }
 
 .section .hero.block p:nth-of-type(2) picture img{
   display: none;
 }
 
-.section.hero-main{
+/* .section.hero-main{
   height: 892px;
 }
 
 .section.hero-main .block p:nth-of-type(1) picture img{
   height: 892px;
-}
+} */
 
 .section.hero-main .hero div:nth-child(2) div p:nth-child(1){
     font-size: 31.62px;
@@ -65,9 +67,9 @@
   margin-left: 12px;
 }
 
-.section.hero-component .block p:nth-of-type(1) picture img{
+/* .section.hero-component .block p:nth-of-type(1) picture img{
   height: 801px;
-}
+} */
 
 .section.hero-main .hero div:nth-child(2) div p:nth-child(2) img{
   width: 174px;
@@ -89,7 +91,7 @@
 }
 
 main .section.hero-component{
-  height: 801px;
+  /* height: 801px; */
   margin-top: 0;
 }
 
@@ -129,9 +131,9 @@ main .section.hero-component{
   display: none;
 }
 
-.section.hero-main{
+/* .section.hero-main{
   height: 864px;
-}
+} */
 
 .section.hero-main .hero-wrapper{
   height: 100%;
@@ -144,9 +146,9 @@ main .section.hero-component{
   justify-content: flex-start;
 }
 
- .section.hero-main .block p:nth-of-type(2) picture img{
+ /* .section.hero-main .block p:nth-of-type(2) picture img{
   height: 864px;
-}
+} */
 
 .section .hero div:nth-child(2) div p:nth-child(2) span{
   margin-left: 20px;
@@ -160,9 +162,9 @@ main .section.hero-component{
   font-size: 83px;
 }
 
-.section.hero-component .block p:nth-of-type(2) picture img{
+/* .section.hero-component .block p:nth-of-type(2) picture img{
   height: 1200px;
-}
+} */
 
 .section.hero-main .hero div:nth-child(2) div p:nth-child(2) img{
   width: 293px;
@@ -186,7 +188,7 @@ main .section.hero-component{
   padding-top: 24px;
 }
 
-main .section.hero-component{
+/* main .section.hero-component{
   height: 1200px;
-}
+} */
 }
