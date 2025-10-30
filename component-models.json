@@ -484,6 +484,23 @@
     "id": "pricecity",
     "fields": [
       {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Price City",
+            "children": [
+              {
+                "name": "V2 Plus",
+                "value": "v2-plus"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "component": "richtext",
         "name": "col1_desc",
         "value": "",
