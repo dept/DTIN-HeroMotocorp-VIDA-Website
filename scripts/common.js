@@ -26,7 +26,7 @@ export default async function fetchAPI(method, url, payload) {
 // eslint-disable-next-line prefer-const
 const priceMaster = await fetchAPI('GET', 'https://www.vidaworld.com/content/dam/vida/config/price-master.json.gzip');
 // eslint-disable-next-line prefer-const, no-unused-vars
-let cityMaster = await fetchAPI('GET', 'https://www.vidaworld.com/content/dam/vida/config/city-master.json.gzip');
+export const cityMaster = await fetchAPI('GET', 'https://www.vidaworld.com/content/dam/vida/config/city-master.json.gzip');
 
 let v2Lite = {}; let v2Pro = {}; let v2Plus = {};
 
@@ -98,11 +98,11 @@ function createCityDropdown(priceData) {
   wrapper.innerHTML = `
     <span class="selected-city">${selectCity}</span>
     <div class="select-dropdown">
-      <img class="search-close" src="/icons/Close.png" alt="close">
+      <img class="search-close" src="/icons/close.png" alt="close">
       <div class="search-bar">
         <input type="text" placeholder="Search" class="search-input"/>
         <button class="search-btn">
-          <img src="/icons/Search.svg" alt="Search"/>
+          <img src="/icons/search.svg" alt="Search"/>
         </button>
       </div>
       ${cityList.outerHTML}
@@ -229,3 +229,75 @@ export {
   createCityDropdown,
   buildCityList,
 };
+
+function buildCityMasterList(cityData) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'city-wrapper';
+
+  wrapper.innerHTML = cityData
+    .map((city) => {
+      const { cityName } = city;
+      const citySlug = cityName.toLowerCase().replace(/\s+/g, '-');
+      return `
+        <a href="/dealers/${citySlug}.html" 
+           class="city-option" 
+           data-value="${cityName.toUpperCase()}">
+          ${cityName.toUpperCase()}
+        </a>
+      `;
+    })
+    .join('');
+
+  return wrapper;
+}
+
+export function createCityMasterDropdown(cityData) {
+  const wrapper = document.createElement('div');
+  wrapper.classList.add('select-wrapper'); // always open by default
+
+  const cityList = buildCityMasterList(cityData);
+
+  wrapper.innerHTML = `
+      <div class="search-bar">
+        <input type="text" placeholder="Search for your city" class="search-input"/>
+        <button class="search-btn">
+          <img src="/icons/Search.svg" alt="Search"/>
+        </button>
+      </div>
+      ${cityList.outerHTML}
+  `;
+
+  const input = wrapper.querySelector('.search-input');
+  const options = wrapper.querySelectorAll('.city-option');
+
+  // 🔹 Live search filter
+  input.addEventListener('keyup', (e) => {
+    const filter = e.target.value.trim().toUpperCase();
+    options.forEach((opt) => {
+      const cityName = opt.getAttribute('data-value');
+      opt.style.display = cityName.includes(filter) ? 'flex' : 'none';
+    });
+  });
+
+  input.addEventListener('click', () => {
+    wrapper.classList.add('open');
+  });
+
+  // 🔹 When user clicks a city
+  options.forEach((opt) => {
+    opt.addEventListener('click', () => {
+      document.body.classList.remove('dropdown-open');
+      wrapper.classList.remove('open');
+    });
+  });
+
+  // 🔹 Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!wrapper.contains(e.target)) {
+      wrapper.classList.remove('open');
+      document.body.classList.remove('dropdown-open');
+    }
+  });
+
+  return wrapper;
+}
