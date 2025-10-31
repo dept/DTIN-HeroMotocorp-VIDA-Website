@@ -349,7 +349,7 @@ font-size: 16px;
 }
 
 .section .calculator-right > div:nth-child(1) div{
-    gap: 90px;
+    gap: 30px;
     padding-bottom: 40px;
 }
 
