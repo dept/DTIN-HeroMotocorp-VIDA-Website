@@ -545,7 +545,7 @@ thead th:nth-child(3) {
     background: rgb(239 235 227);
     border-radius: 1pc;
     padding: 3pc;
-    margin: 20px auto;
+    margin: 20px;
 }
 
 .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .pricecity.block {
