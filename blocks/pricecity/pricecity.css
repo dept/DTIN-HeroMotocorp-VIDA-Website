@@ -575,6 +575,8 @@ thead th:nth-child(3) {
     text-align: right;
     width: 30%;
     min-width: 200px;
+    display: flex;
+    flex-direction: column;
 }
 
 .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .main-heading {
@@ -586,6 +588,8 @@ thead th:nth-child(3) {
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 5px;
+    
+    /* justify-content: center; */
 }
 
 .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .main-heading>span {
@@ -619,6 +623,7 @@ thead th:nth-child(3) {
     color: #666;
     margin-top: 15px;
     line-height: 1.5;
+    max-width: 400px;
 }
 
 .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .price {
@@ -641,13 +646,26 @@ thead th:nth-child(3) {
     margin-left: auto;
 }
 
-@media (width <=768px) {
+@media (width <=900px) {
+    .section.pricecity-container .pricecity-wrapper:has(.pricecity.block.v2-plus) {
+        padding: 18px 8px;
+    }
+
     .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .pricecity.block {
         padding: 20px;
     }
 
     .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .price-container {
-        flex-direction: column;
+        /* flex-direction: column; */
+        flex-direction: column-reverse;
+    }
+
+    .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .main-heading {
+        justify-content: center;
+    }
+
+    .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .sub-text {
+        text-align: center;
     }
 
     .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .left-content,
@@ -657,13 +675,31 @@ thead th:nth-child(3) {
         padding-right: 0;
     }
 
+    .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .sub-text {
+        font-size: 12px;
+    }
+
     .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .right-content {
         margin-top: 20px;
         text-align: left;
     }
 
+    .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .right-content {
+        align-items: center;
+    }
+
     .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .disclaimer {
         margin-left: 0;
+        max-width: 77%;
+    }
+
+    .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .main-heading>span {
+        font-size: 24px;
+    }
+
+    .section.pricecity-container .pricecity-wrapper .pricecity.block.v2-plus .select-wrapper .selected-city {
+        font-size: 30px;
+        margin-left: 8px;
     }
 
     .section.pricecity-container .pricecity-wrapper .pricecity.block table tbody td .select-wrapper .select-dropdown,
