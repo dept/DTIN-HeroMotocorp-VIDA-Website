@@ -98,11 +98,11 @@ function createCityDropdown(priceData) {
   wrapper.innerHTML = `
     <span class="selected-city">${selectCity}</span>
     <div class="select-dropdown">
-      <img class="search-close" src="/icons/Close.png" alt="close">
+      <img class="search-close" src="/icons/close.png" alt="close">
       <div class="search-bar">
         <input type="text" placeholder="Search" class="search-input"/>
         <button class="search-btn">
-          <img src="/icons/Search.svg" alt="Search"/>
+          <img src="/icons/search.svg" alt="Search"/>
         </button>
       </div>
       ${cityList.outerHTML}
