@@ -38,13 +38,13 @@
 }
 
 
-.section.dealership .citymaster>div:nth-child(2) p:nth-child(1) {
+.section.dealership .citymaster>div:nth-child(2) p:nth-child(2) {
     font: var(--font-card);
     letter-spacing: 0.25px;
     padding-top: 24px;
 }
 
-.section.dealership .citymaster>div:nth-child(2) p:nth-child(2) {
+.section.dealership .citymaster>div:nth-child(2) p:nth-child(3) {
     font-size: 40px;
     line-height: 48px;
     letter-spacing: 0;
@@ -54,7 +54,7 @@
     color: #FF5310;
 }
 
-.section.dealership .citymaster>div:nth-child(2) p:nth-child(3) {
+.section.dealership .citymaster>div:nth-child(2) p:nth-child(4) {
     font: var(--font-400);
     padding-top: 8px;
     letter-spacing: 0.25px;
@@ -121,19 +121,19 @@
     }
 
 
-    .section.dealership .citymaster>div:nth-child(2) p:nth-child(1) {
+    .section.dealership .citymaster>div:nth-child(2) p:nth-child(2) {
         font: var(--font-card);
         letter-spacing: 0.1px;
         padding-top: 32px;
     }
 
-    .section.dealership .citymaster>div:nth-child(2) p:nth-child(2) {
+    .section.dealership .citymaster>div:nth-child(2) p:nth-child(3) {
         font-size: 72px;
         line-height: 72px;
         letter-spacing: -0.25px;
     }
 
-    .section.dealership .citymaster>div:nth-child(2) p:nth-child(3) {
+    .section.dealership .citymaster>div:nth-child(2) p:nth-child(4) {
         font: var(--font-400);
         letter-spacing: 0.15px;
         padding-top: 4px;
