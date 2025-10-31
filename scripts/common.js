@@ -56,7 +56,7 @@ try {
     return cityA.localeCompare(cityB);
   });
 } catch (error) {
-  // Handle error
+  // errroer
 }
 export const priceData = {
   v2Lite,
@@ -188,18 +188,11 @@ function setupCityDropdownAndPrice(targetRow, priceElements, block, priceData, c
 
       if (newCity !== selectedCity) {
         selectedCity = newCity;
-
-        // 🔹 Update visible selected city name
         selectedCityEl.textContent = selectedCity;
-
-        // 🔹 Update active state in dropdown
         cityOptions.forEach((o) => o.classList.toggle('active', o.dataset.value === selectedCity));
-
-        // 🔹 Update all price values
         updatePrices(priceElements, block, priceData, customUpdater);
       }
 
-      // Close dropdown
       dropdown.classList.remove('open');
       if (window.innerWidth <= 900) document.body.classList.remove('dropdown-open');
     });
@@ -207,12 +200,11 @@ function setupCityDropdownAndPrice(targetRow, priceElements, block, priceData, c
 
   cityContainer.addEventListener('click', (e) => {
     e.stopPropagation();
-    closeDropdown(); // close any other open dropdowns
+    closeDropdown();
     dropdown.classList.add('open');
     if (window.innerWidth <= 900) document.body.classList.add('dropdown-open');
   });
 
-  // Close dropdown when clicking outside
   document.addEventListener('click', (e) => {
     if (!dropdown.contains(e.target) && !cityContainer.contains(e.target)) {
       dropdown.classList.remove('open');
@@ -253,7 +245,7 @@ function buildCityMasterList(cityData) {
 
 export function createCityMasterDropdown(cityData) {
   const wrapper = document.createElement('div');
-  wrapper.classList.add('select-wrapper'); // always open by default
+  wrapper.classList.add('select-wrapper');
 
   const cityList = buildCityMasterList(cityData);
 
@@ -270,7 +262,6 @@ export function createCityMasterDropdown(cityData) {
   const input = wrapper.querySelector('.search-input');
   const options = wrapper.querySelectorAll('.city-option');
 
-  // 🔹 Live search filter
   input.addEventListener('keyup', (e) => {
     const filter = e.target.value.trim().toUpperCase();
     options.forEach((opt) => {
@@ -283,7 +274,6 @@ export function createCityMasterDropdown(cityData) {
     wrapper.classList.add('open');
   });
 
-  // 🔹 When user clicks a city
   options.forEach((opt) => {
     opt.addEventListener('click', () => {
       document.body.classList.remove('dropdown-open');
@@ -291,7 +281,6 @@ export function createCityMasterDropdown(cityData) {
     });
   });
 
-  // 🔹 Close when clicking outside
   document.addEventListener('click', (e) => {
     if (!wrapper.contains(e.target)) {
       wrapper.classList.remove('open');
